@@ -1,5 +1,4 @@
-# Spring 2014 - CPSC 120 - SI -- Week 2
-
+# Week 2
 
 ## Exercise
 
@@ -9,17 +8,20 @@ terminal, and experiment a little with our first "hello world" program.
 - First, [download all these files]
   (https://github.com/benblazak/2014-spring-si-cpsc120/archive/master.zip), and
   unzip them.
+
 - Next, open the Terminal app, and navigate to the folder you just unzipped.
     - Use the "cd" command to do this.  If your unzipped folder is in
       Downloads, type `cd ~/Downloads/2014-spring-si-cpsc120-master`.
     - It may be helpful to keep both the terminal and a Finder window open to
       the same directory.
+
 - Take a minute to look through all the files.  Start reading at the top, and
   stop when you feel like you have a good enough idea of what each file is for
   to move on.  Not all the information in every file is necessary, but it's
   important to have a general idea of what's happening.  If you have questions
   that aren't explained in the file you're looking at, ask a neighbor or two.
   If they don't know either, either google together, or ask me :)
+
 - When you get to it, open `test.cpp`.
 
 
@@ -33,10 +35,12 @@ terminal, and experiment a little with our first "hello world" program.
       which you'll pick up in time), but using Make is just as easy, and a much
       more standard way to do thing on Unix, so that's what I'll give
       instructions for below.
+
 - If you just want to compile the source code into an executable directly, you
   can use
-
-      clang++ test.cpp -o test.exe
+  ```
+  clang++ test.cpp -o test.exe
+  ```
 
   See the comments at the top of `generate-files.sh` for more information.  We
   won't need to do this in this exercise, but it's good to know how.
@@ -49,17 +53,19 @@ terminal, and experiment a little with our first "hello world" program.
   a number of intermediate files (`test.o`, `test.s`, etc.).
 
 - In the terminal, type `make run`.  You should see something like
-
-      --- running test.exe -------------------------------------
-      hello world
-      ----------------------------------------------------------
-       The return value of test.exe was: 0
-       The shell command used to run the program was: ./test.exe
-      ----------------------------------------------------------
+  ```
+  --- running test.exe -------------------------------------
+  hello world
+  ----------------------------------------------------------
+   The return value of test.exe was: 0
+   The shell command used to run the program was: ./test.exe
+  ----------------------------------------------------------
+  ```
 
 - Try typing `./test.exe` into the terminal.  This should only produce
-
-      hello world
+  ```
+  hello world
+  ```
 
 - Try looking at the other files, just for fun.  The end of
   `test.preprocessed.cpp` might be especially interesting -- but be careful

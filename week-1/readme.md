@@ -1,4 +1,4 @@
-# Spring 2014 - CPSC 120 - SI -- Week 1
+# Week 1
 
 Just as a record of what we talked about during SI and Lab:
 - Stages of compilation
