@@ -28,7 +28,7 @@ int main() {
 // version 1
 //
 // This version has no "using namespace std;", but does use "std::cout" instead
-// of "cout".  Does this change anything that you can see?
+// of "cout".
 //
 // Notes:
 // - In the classroom, "using namespace std;" is almost always used.  In the
@@ -55,9 +55,7 @@ int main() {
 // version 2
 //
 // This version used macros to define the message we print to stdout and the
-// value (the integer, or "int") we return to the operating system.  Does this
-// change anything that you can see?  Does this effect the ".preprocessed.cpp"
-// file?
+// value (the integer, or "int") we return to the operating system.
 // ----------------------------------------------------------------------------
 
 /*
@@ -89,10 +87,7 @@ int main() {
 // ----------------------------------------------------------------------------
 // version 4
 //
-// What if we return a value other than 0?  Try out a few different values, if
-// you like.  If you're having fun, go back up to one of the different versions
-// and try out a few different output messages -- or maybe multiple output
-// messages :)
+// What if we return a value other than 0?
 //
 // Notes:
 // - In real code, returning anything other than 0 from main() usually means
@@ -114,7 +109,7 @@ int main() {
 // ----------------------------------------------------------------------------
 // version 5
 //
-// This version has a "return" before our "cout".  What does this do?
+// This version has a "return" before our "cout".
 // ----------------------------------------------------------------------------
 
 /*
@@ -129,9 +124,7 @@ int main() {
 // ----------------------------------------------------------------------------
 // version 6
 //
-// Wait, we can have more than one "return"?  And more than one "cout"?  When
-// does the program stop running (after which statement)?  Which value is
-// returned?
+// Wait, we can have more than one "return"?  And more than one "cout"?
 // ----------------------------------------------------------------------------
 
 /*
@@ -166,12 +159,7 @@ int main() {
 // ----------------------------------------------------------------------------
 // version 8
 //
-// What value is returned now?  Keep in mind that the program is executed in
-// about the same order in which we read it (from top to bottom, and from left
-// to right).  Also note that for all intents and purposes, ONLY ONE STATEMENT
-// IS EXECUTED AT A TIME.  This is very important.
-//
-// More on variables later.
+// Another example about variables.  More on variables later.
 // ----------------------------------------------------------------------------
 
 /*
