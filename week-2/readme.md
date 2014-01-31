@@ -11,7 +11,7 @@ terminal, and experiment a little with our first "hello world" program.
 
 - Next, open the Terminal app, and navigate to the folder you just unzipped.
     - Use the "cd" command to do this.  If your unzipped folder is in
-      Downloads, type `cd ~/Downloads/2014-spring-si-cpsc120-master`.
+      Downloads, type `cd ~/Downloads/2014-spring-si-cpsc120-master/week2`.
     - It may be helpful to keep both the terminal and a Finder window open to
       the same directory.
 

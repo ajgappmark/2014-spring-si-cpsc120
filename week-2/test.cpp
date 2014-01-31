@@ -54,7 +54,7 @@ int main() {
 // ----------------------------------------------------------------------------
 // version 2
 //
-// This version used macros to define the message we print to stdout and the
+// This version uses macros to define the message we print to stdout and the
 // value (the integer, or "int") we return to the operating system.
 // ----------------------------------------------------------------------------
 
