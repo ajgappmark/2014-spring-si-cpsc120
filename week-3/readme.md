@@ -276,19 +276,18 @@ things we can do with them: assign them values.
 
   What do you think will be printed?
 
-  It's okay, by the way, to "just compile" or "just run" the program to see
-  what will happen if you're not sure.  This experimentation is actually
-  invaluable, especially when you're first starting out.  Keep in mind though
-  that the goal is to *understand* what's going on.  Eventually, you should be
-  able to know what code like the above will do without having to run it.
+  It's okay, by the way, to write stuff down on a scratch paper, or to "just
+  compile" or "just run" the program to see what will happen if you're not
+  sure.  This experimentation is actually invaluable, especially when you're
+  first starting out.  Keep in mind though that the goal is to *understand*
+  what's going on.  Eventually, you should be able to know what code like the
+  above will do without having to run it.
 
 
 ### Operators
-Finally, on to operators in general!  This is a little earlier than the
-syllabus has them, but I feel like we should at least mention them, so that we
-can get to the interesting stuff more quickly.  The ones we don't learn about
-now, I imagine we'll learn about as we need (which, you'll find, is a recurring
-theme).
+Finally, on to operators in general!  We'll only discuss a few, but the ones we
+don't learn about now, I imagine we'll learn about as we need (which, you'll
+find, is a recurring theme).
 
 At this point, it'll be good for you start finding things on your own, so
 please do a quick google for "c++ operators".  If you see a link to
