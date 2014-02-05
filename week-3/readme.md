@@ -388,8 +388,8 @@ like a table of all the different operators C++ has.
 
 - [Is `using namespace std;` bad practice?] (https://www.google.com/search?client=safari&rls=en&q=%5Cn+vs+endl&ie=UTF-8&oe=UTF-8#q=is+using+namespace+std+bad+practice%3F&rls=en)
 
-- [What's the difference between \n and endl] (https://www.google.com/search?client=safari&rls=en&q=%5Cn+vs+endl&ie=UTF-8&oe=UTF-8#q=what's+the+difference+between+%5Cn+and+endl&rls=en)
-    - Or similarly: [\n vs endl] (https://www.google.com/search?client=safari&rls=en&q=%5Cn+vs+endl&ie=UTF-8&oe=UTF-8#q=%5Cn+vs+endl&rls=en)
+- [What's the difference between `\n` and `endl`] (https://www.google.com/search?client=safari&rls=en&q=%5Cn+vs+endl&ie=UTF-8&oe=UTF-8#q=what's+the+difference+between+%5Cn+and+endl&rls=en)
+    - Or similarly: [`\n` vs `endl`] (https://www.google.com/search?client=safari&rls=en&q=%5Cn+vs+endl&ie=UTF-8&oe=UTF-8#q=%5Cn+vs+endl&rls=en)
 
 
 ## Challenges
