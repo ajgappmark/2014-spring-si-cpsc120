@@ -34,16 +34,16 @@ have time and feel themselves equal to the challenge.
   cd lab-week-3     # navigate to this new directory
   pwd               # "print working directory": to make sure we're in the
                     #   right place
-  touch file-1.cpp  # also create a file called "file-1.cpp"
+  touch lab.cpp     # also create a file called "lab.cpp"
   ls                # "list" the contents of the directory: to make sure the
                     #   files actually got created
   ```
 
 
-- Open "file-1.cpp" for editing by typing the following into the terminal:
+- Open "lab.cpp" for editing by typing the following into the terminal:
 
   ```bash
-  open file-1.cpp  # OS X specific: open "file-1.cpp" in the default program
+  open lab.cpp  # OS X specific: open "lab.cpp" in the default program
   ```
 
   then edit it to contain the following "hello world" program:
@@ -67,13 +67,13 @@ have time and feel themselves equal to the challenge.
 - Compile the "hello world" program by typing the following into the terminal:
 
   ```bash
-  clang++ file-1.cpp -o file-1
+  clang++ lab.cpp -o lab
   ```
 
   and then run it (still in the terminal) by typing the following:
 
   ```bash
-  ./file-1
+  ./lab
   ```
 
   The text
@@ -86,13 +86,22 @@ have time and feel themselves equal to the challenge.
 
 
 - Note that:
+    - Last week we appended ".exe" to our executable file, so that above we
+      would have said `clang++ lab.cpp -o lab.exe` to compile the program, and
+      `./lab.exe` to run it.  Using no extension at all is a more Unix-y (and
+      therefore Mac and Linux like) way of doing things.  Appending ".exe" is
+      a very Windows thing to do.  You should probably stick to the conventions
+      of whatever system you're working with unless you have a reason not to.
+      In the end though, all that really matters is that what you're doing is
+      clear to whoever is using the program.
+
     - You can remove your compiled file (a.k.a. "executable" or "binary" file)
-      by typing `rm file-1` into the terminal.
+      by typing `rm lab` into the terminal.
 
     - You can regenerate or update your compiled file at any time with the
-      command `clang++ file-1.cpp -o file-1`.
-        - This must be done every time you make a change to "file-1.cpp",
-          before running the program again, otherwise you'll be running the old
+      command `clang++ lab.cpp -o lab`.
+        - This must be done every time you make a change to "lab.cpp", before
+          running the program again, otherwise you'll be running the old
           version of the executable.
         - Also, before recompiling, be sure to save your edited file :) ,
           otherwise you'll be compiling the old version of the source.
