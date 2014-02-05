@@ -371,7 +371,8 @@ like a table of all the different operators C++ has.
 
   Note that in general, you should have a reason for doing things like this
   besides just to confuse people.  But for an exercise, it's fun.  Things are
-  not always as they seem :) .  More about that in [Data Types](#data-types).
+  not always as they seem :) .  More about that in Data Types, hopefully next
+  week.
 
 
 ### Things to Think About Next Time You're Bored
@@ -379,7 +380,7 @@ like a table of all the different operators C++ has.
 - [Is `using namespace std;` bad practice?] (https://www.google.com/search?client=safari&rls=en&q=%5Cn+vs+endl&ie=UTF-8&oe=UTF-8#q=is+using+namespace+std+bad+practice%3F&rls=en)
 
 - [What's the difference between \n and endl] (https://www.google.com/search?client=safari&rls=en&q=%5Cn+vs+endl&ie=UTF-8&oe=UTF-8#q=what's+the+difference+between+%5Cn+and+endl&rls=en)
-    - Or [\n vs endl] (https://www.google.com/search?client=safari&rls=en&q=%5Cn+vs+endl&ie=UTF-8&oe=UTF-8#q=%5Cn+vs+endl&rls=en)
+    - Or similarly: [\n vs endl] (https://www.google.com/search?client=safari&rls=en&q=%5Cn+vs+endl&ie=UTF-8&oe=UTF-8#q=%5Cn+vs+endl&rls=en)
 
 
 ## Challenges
@@ -430,9 +431,23 @@ like a table of all the different operators C++ has.
   and the GNU Make documentation is [here]
   (http://www.gnu.org/software/make/manual/make.html).
 
-<!-- TODO: is git installed on the lab computers? -->
+- Search and read about what a Revision Control System (or Version Control
+  System, etc.) is.  There are a few you should probably know about just for
+  fun: especially RCS and CVS.  You may run into others.  Especially, read
+  about Git.  If git is installed on these computers (try `man git` on the
+  command line), experiment a little, and try revision controlling your current
+  project.  If you're especially adventurous, perhaps you'll open a github
+  account, and play around with pushing code from a local repository to github
+  (the github help pages are especially helpful).
 
-<!-- TODO: coding exercise -->
+- Start going through [The Python Tutorial]
+  (http://docs.python.org/3.3/tutorial/).  Yes, this is a C++ class... but
+  learning other (good) languages will only make you a better programmer, and
+  [Python is awesome](http://xkcd.com/353/)!  Most of the concepts you learn
+  will translate fairly directly to C++.  Also, eventually somebody (probably a
+  professor, likely during a test) is going to ask you to write pseudocode for
+  something.  Whenever that happens to me, I usually just write whatever they
+  wish in Python :)
 
 
 -------------------------------------------------------------------------------
