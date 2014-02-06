@@ -1,10 +1,12 @@
-# CPSC 120
+# CPSC 120 SI / Lab
 
 A place for lab exercises, solutions to previous assignments, general
 information, and everything else SI or Lab related that I have for you guys.
 
 
 ## Calendar
+
+For Professor Smith's Thursday (lecture) Thursday (lab) section.
 
 - Week  1: 2014-01-23
     - Introduction
