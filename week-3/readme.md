@@ -1,12 +1,11 @@
 # Week 3
 
-**BEFORE YOU START**
-Turns out, now that I don't have time to change this drastically, that it
-contains a whole bunch of words.  I like to think they're important words...
-but if you find yourself getting bored, kindly blame it on me, absorb what you
-happily can, and move on to something interesting.  I mean that.  I'll try to
-get some fun programming challenges in here soon.  I'll also try not to lose
-those of you who haven't seen this stuff before.  Both are more
+**BEFORE YOU START**: Turns out, now that I don't have time to change this
+drastically, that it contains a whole bunch of words.  I like to think they're
+important words...  but if you find yourself getting bored, kindly blame it on
+me, absorb what you happily can, and move on to something interesting.  I mean
+that.  I'll try to get some fun programming challenges in here soon.  I'll also
+try not to lose those of you who haven't seen this stuff before.  Both are more
 challenging than you realize, until you try to do it :)
 
 
