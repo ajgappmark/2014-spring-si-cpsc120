@@ -1,6 +1,6 @@
 # Week 3
 
-**BEFORE YOU START**: Turns out, now that I don't have time to change this
+**BEFORE YOU START.** Turns out, now that I don't have time to change this
 drastically, that it contains a whole bunch of words.  I like to think they're
 important words...  but if you find yourself getting bored, kindly blame it on
 me, absorb what you happily can, and move on to something interesting.  I mean
