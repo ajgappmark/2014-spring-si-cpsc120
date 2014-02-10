@@ -5,9 +5,10 @@
 ### Setup
 
 One last time, before I decide that it doesn't matter and you can use whatever
-you want, please **start up the handy Terminal**.
+you want, please **start up the lovely Terminal**.
 
-- It's okay to use the terminal for the lab on titanium as well, if you like.
+- It's okay to use the terminal for the lab on titanium as well, if you like
+  (though of course you don't have to).
 - Pressing the tab key after typing part of a command will often complete the
   command for you (and save you typing).
 - Pressing the up arrow will cycle through commands you have previously entered
@@ -117,6 +118,14 @@ and an `unsigned int` were?  I'm glad you asked :)
 ```C++
 #include <iostream>
 
+// The code `sizeof(int)` is an example of function notation, which we'll get
+// to in a few weeks I think.  Similar notation is used for the type of casting
+// described later in this exercise.  For now, just think of it as in math:
+// "f(x)" is a function taking an input "x" and returning (or evaluating to, or
+// equaling) some value; "sizeof(int)" is a function taking a type, "int", and
+// returning (or evaluating to, or being replaced by) the number of bytes it
+// takes to store that type.
+
 int main() {
     std::cout << "The size of an `int` is "
               << sizeof(int) << " bytes\n";
@@ -182,22 +191,25 @@ int main() {
 }
 ```
 
+What do you think?
+
 It turns out that in general, we can represent 2^n different numbers with an n
 bit integer.  For unsigned types, we start with the number 0, so the range of
 an n bit unsigned integer is 0 to 2^n-1.  For signed types, we use the most
 significant bit (i.e. the "largest" bit, usually written on the left) as the
 sign bit, so we have 31 bits left for the actual number.  Most typically, we
-use something called [2's compliment]
-(http://en.wikipedia.org/wiki/Two's_complement) to represent negative numbers
-conveniently, and we end up with a range of from -2^(n-1) to 2^(n-1)-1.  Break
-out your calculator, and you'll see that
+use something called
+[2's compliment](http://en.wikipedia.org/wiki/Two's_complement)
+to represent negative numbers conveniently, and we end up with a range of from
+-2^(n-1) to 2^(n-1)-1.  Break out your calculator, and you'll see that
 [-2^(32-1)](https://www.google.com/search?client=safari&rls=en&q=2%5E32-1&ie=UTF-8&oe=UTF-8#q=-2%5E(32-1)&rls=en)
 is indeed the value of `a+1` in our first example, and the initial value of `b`
 was precisely
 [2^32-1](https://www.google.com/search?client=safari&rls=en&q=2%5E32-1&ie=UTF-8&oe=UTF-8#q=2%5E32-1&rls=en).
 
-If you ever need to reference this, and don't happen to remember, just look up
-"c++ integer ranges", or something like that, and you should be able to find
+If you ever need to reference this, and don't happen to remember (which you
+probably won't unless you use it a lot), just look up "c++ integer ranges", or
+something like that, and you should be able to find
 [something useful](http://en.wikipedia.org/wiki/Integer_(computer_science)).
 
 Finally, before we move on, you should know that there are other integer types
@@ -217,11 +229,11 @@ other things we need to know.
   them only to represent single characters.
 
 - There are multiple types of floating point numbers (which you can look up if
-  you like!) but the one we'll mostly use is `double`.  It gets it's name from
-  being a [double precision]
-  (http://en.wikipedia.org/wiki/Double-precision_floating-point_format) (or,
-  twice as wide as `float`) floating point number, according to the IEEE 754
-  standard.  You should use it whenever you need to store a number with a
+  you like) but the one we'll mostly use is `double`.  It gets it's name from
+  being a
+  [double precision](http://en.wikipedia.org/wiki/Double-precision_floating-point_format)
+  (or, twice as wide as `float`) floating point number, according to the IEEE
+  754 standard.  You should use it whenever you need to store a number with a
   decimal point, and it's too inconvenient to use something else.
 
 - Casting is the act of taking data of one type, and "turning it into" data of
@@ -266,9 +278,9 @@ int main() {
 What happened to the value of `d`?  First, note that `4` and `5` are both
 integers.  When `/` operates on two integers, it returns an integer.  Since
 integers have no way to store decimal points, the decimal part of the number is
-thrown away (*not rounded* -- we call this truncation).
+thrown away (or cut off -- *not rounded* -- we call this truncation).
 
-Now instead of `4/5` try `double d = 4/5.0;`.  What happens now?
+Instead of `4/5` try `double d = 4/5.0;`.  What happens now?
 
 Lets return to (and extend) our example of `'a'+5` from last week:
 
@@ -303,12 +315,13 @@ int main() {
 Whereas `char c = 97` is an example of implicit type conversion, most of these
 are examples of explicit conversion.  When you say `int(...)`, you explicitly
 tell the compiler to turn whatever is between the parenthesis into an `int` (if
-that's possible; and if it's not, you'll get an error).
+that's possible; and if it's not, you'll get an error, which is fine; you'll
+just have to change it an recompile).
 
-C++ has other types of casting [which you can read about]
-(http://www.cplusplus.com/doc/tutorial/typecasting/) if you wish.  You'll find
-that casting has many wonderful (and sometimes dangerous) uses once you get to
-learning about pointers and objects.
+C++ has other types of casting
+[which you can read about](http://www.cplusplus.com/doc/tutorial/typecasting/)
+if you wish.  You'll find that casting has many wonderful (and sometimes
+dangerous) uses once you get to learning about pointers and objects.
 
 #### Strings
 
@@ -317,8 +330,8 @@ Finally, we get to strings :) .  Strings are not included above, along with
 data types"; that is, strings are not just a bunch of 1's and 0's representing
 characters living in some static location in memory.  Strings are *objects*.
 And we don't really care about objects right now, but it's important to know
-the difference.  The practical upshot is that we'll need to include another
-header file in order to be able to use them.
+that they're different.  The practical upshot is that we'll need to include
+another header file in order to be able to use them.
 
 ```C++
 #include <iostream>
