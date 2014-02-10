@@ -335,8 +335,24 @@ Not so hard :) .  Note that we could also write this as
 
 ```C++
 #include <iostream>
-#include <string>
+#include <string>    // needed for `std::string`
 using namespace std;
+
+int main() {
+    string s = "hello world!";
+    cout << s << "\n";
+    return 0;
+}
+```
+
+or even (as you may see at some point in the future) like this
+
+```C++
+#include <iostream>
+using std::cout;
+
+#include <string>
+using std::string;
 
 int main() {
     string s = "hello world!";
@@ -351,7 +367,7 @@ literals oh so conveniently, they also have what are called "member functions"
 
 ```C++
 #include <iostream>
-#include <string>
+#include <string>    // needed for `std::string`
 
 int main() {
     std::string s = "hello world!";
