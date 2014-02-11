@@ -11,7 +11,7 @@
         - Strings
         - Boolean Expressions (Specifically)
     - Simple Control Flow (`if`, `else`)
-- Challenges
+- Challenge
     - Continuing Challenges
 - Notes
 
@@ -333,7 +333,7 @@ Whereas `char c = 97` is an example of implicit type conversion, most of these
 are examples of explicit conversion.  When you say `int(...)`, you explicitly
 tell the compiler to turn whatever is between the parenthesis into an `int` (if
 that's possible; and if it's not, you'll get an error, which is fine; you'll
-just have to change it an recompile).
+just have to fix it an recompile).
 
 C++ has other types of casting
 [which you can read about](http://www.cplusplus.com/doc/tutorial/typecasting/)
@@ -344,11 +344,11 @@ dangerous) uses once you get to learning about pointers and objects.
 
 Finally, we get to strings :) .  Strings are not included above, along with
 `chahr`s, `int`s, and the like, because strings are not what we call "primitive
-data types"; that is, strings are not just a bunch of 1's and 0's representing
-characters living in some static location in memory.  Strings are *objects*.
-And we don't really care about objects right now, but it's important to know
-that they're different.  The practical upshot is that we'll need to include
-another header file in order to be able to use them.
+data types"; that is, strings are not just a bunch of `chars`, all in a row,
+living in some static location in memory.  Strings are *objects*.  And we don't
+really care about objects yet, but it's important to know that they're
+different than primitive data types.  The practical upshot of all this is that
+we'll need to include another header file in order to be able to use them.
 
 ```C++
 #include <iostream>
@@ -424,8 +424,9 @@ int main() {
 }
 ```
 
-The `string` class has other member functions as well, which [you can read
-about](http://en.cppreference.com/w/cpp/string/basic_string).
+The `string` class has other member functions as well, which
+[you can read about](http://en.cppreference.com/w/cpp/string/basic_string)
+if you like.
 
 Before we move on, quick question: why can we write
 
@@ -455,16 +456,16 @@ Take a look at these examples:
 
 - Note that this should generate 3 warnings.  What is it complaining about?
   Before looking below, how would you fix it?  I had to look this up too...
-  (because why *can't* I compare strings using `==`? grr) but that's
-  programming :)
+  but that's programming :)
 
 ```C++
 #include <iostream>
 
 /**
  * Notes:
- * - Sometimes (especially in documentation) we say "lvalue" instead of "left
- *   value" and "rvalue" instead of "right value".
+ * - Sometimes (especially in documentation) we say "lvalue" instead of "the
+ *   value on the left hand side" and "rvalue" instead of "the value on the
+ *   right hand side".
  *
  * References:
  * - http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
@@ -514,9 +515,9 @@ int main() {
     std::cout << std::endl;
 
     // we often read `!` as "not"
-    std::cout << "(!true) : " << (!true) << std::endl;    // "not true"
-    std::cout << "(!false) : " << (!false) << std::endl;  // "not false"
-    std::cout << "(5 != 2) : " << (5 != 2) << std::endl;
+    std::cout << "(!true) : " << (!true) << std::endl;    // not true
+    std::cout << "(!false) : " << (!false) << std::endl;  // not false
+    std::cout << "(5 != 2) : " << (5 != 2) << std::endl;  // does 5 not equal 2?
 
     std::cout << std::endl;
 
@@ -570,7 +571,6 @@ int main() {
 //     std::cout << "(\"hello\" < \"world\") : "
 //               << ("hello" < "world") << std::endl;
 
-
     // the second two can be rewritten though
 
     std::cout << "std::string(\"this\").compare(\"that\") : "
@@ -607,7 +607,7 @@ returning `true` if the left value is "smaller" than the right value, and
 (almost?) anywhere you could write `true`, you could also write `(2 < 5)`.
 
 Knowing this, consider the following code.  Keep in mind that `0` is used for
-`false` and `1` (or sometimes any other nonzero value) is used for `true`.
+`false`, and `1` (or sometimes any other nonzero value) is used for `true`.
 What do you think will be printed?
 
 ```C++
@@ -620,7 +620,7 @@ int main() {
 ```
 
 The problem is, remember that `<` is a binary operator?  And that `true` is
-silent converted to `1`, and `false` is silently converted to `0`?  This is
+silently converted to `1`, and `false` is silently converted to `0`?  This is
 about what's happening, step by step, when the code is executed:
 
 0. `(10 < 5  < 7)`
@@ -669,7 +669,7 @@ to things that you think won't work.  See if it compiles, and see what it does
 
 
 
-## Challenges
+## Challenge
 
 Combining the things we've learned thus far, write a program that:
 - Asks the user for an integer
@@ -687,11 +687,11 @@ Please enter another integer: 5
 ```
 
 Notes:
-- You may assume, for now, that the user inputs the correct type of data (i.e.
+- You may assume, for now, that the user inputs the correct type of data (i.e.,
   that you don't have to check for errors when reading from `std::cin`).
 - It's fun to think that what this program does is really the beginning of how
   interpreted languages (like Python) work.  Another example is the unix
-  program bc does.  Try typing `bc` into the terminal; then type a few math
+  program bc.  Try typing `bc` into the terminal; then type a few math
   expressions (like `4 * 5`), pressing "enter" after each one; type ctrl+d, or
   `quit` when you're done :)
 
