@@ -20,7 +20,7 @@
 ## Exercise
 
 If you get done early, please help a friend.  If you don't have a friend, and
-you can possible stand it, please make one, and then help them :)
+you can possibly stand it, please make one, and then help them :)
 
 
 ### Setup
