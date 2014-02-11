@@ -19,6 +19,10 @@
 
 ## Exercise
 
+If you get done early, please help a friend.  If you don't have a friend, and
+you can possible stand it, please make one, and then help them :)
+
+
 ### Setup
 
 One last time, before I decide that it doesn't matter and you can use whatever
