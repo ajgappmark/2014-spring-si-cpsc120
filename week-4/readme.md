@@ -410,15 +410,264 @@ int main() {
 The `string` class has other member functions as well, which [you can read
 about](http://en.cppreference.com/w/cpp/string/basic_string).
 
+Before we move on, quick question: why can we write
+
+```C++
+#include <iostream>
+
+int main() {
+    std::cout << "hello world\n";
+    return 0;
+}
+```
+
+without including the string library (that is, without `#include <string>`),
+even though it obviously uses strings? [(note)](#notes)
+
 #### Boolean Expressions (Specifically)
+
+One important thing that we haven't mentioned yet is the boolean type (`bool`,
+named after
+[George Bool](http://en.wikipedia.org/wiki/George_Boole),
+who did a lot of cool stuff with logic in the 1800's).  Boolean variables are
+variables that are either `true` (often represented as `1`) or `false` (often
+represented as `0`).  It's surprising how often such a simple thing turns out
+to be useful.
+
+Take a look at these examples:
+
+- Note that this should generate 3 warnings.  What is it complaining about?
+  Before looking below, how would you fix it?  I had to look this up too...
+  (because why *can't* I compare strings using `==`? grr) but that's
+  programming :)
+
+```C++
+#include <iostream>
+
+/**
+ * Notes:
+ * - Sometimes (especially in documentation) we say "lvalue" instead of "left
+ *   value" and "rvalue" instead of "right value".
+ *
+ * References:
+ * - http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B
+ */
+
+int main() {
+    bool a = true;
+    bool b = false;
+    bool c = 1;
+    bool d = 0;
+    bool e = 5;  // remember automatic type conversion?
+
+    std::cout << "a = " << a << std::endl;
+    std::cout << "b = " << b << std::endl;
+    std::cout << "c = " << b << std::endl;
+    std::cout << "d = " << b << std::endl;
+    std::cout << "e = " << b << std::endl;
+
+    std::cout << std::endl;
+
+    std::cout << "(5 < 2) : " << (5 < 2) << std::endl;
+    std::cout << "(2 < 5) : " << (2 < 5) << std::endl;
+    std::cout << "(2 <= 5) : " << (2 <= 5) << std::endl;
+    std::cout << "(5 >= 5) : " << (5 >= 5) << std::endl;
+
+    std::cout << std::endl;
+
+    // does this make sense? what is it doing? :)
+    std::cout << "(\"hello\" < \"world\") : "
+              << ("hello" < "world") << std::endl;
+
+    std::cout << std::endl;
+
+    // in C++, `=` is for assignment (so `a = 5` means "set a to 5"), while
+    // `==` is for comparison (so `a == 5` means "is a equal to 5?")
+    std::cout << "(2 == 5) : " << (2 == 5) << std::endl;
+    std::cout << "(5 == 5) : " << (5 == 5) << std::endl;
+    std::cout << "('c' == 'c') : " << ('c' == 'c') << std::endl;
+    std::cout << "(4.5 == 4.5) : " << (4.5 == 4.5) << std::endl;
+    std::cout << "(true == false) : " << (true == false) << std::endl;
+    std::cout << "(true == true) : " << (true == true) << std::endl;
+    std::cout << "(\"this\" == \"that\") : "
+              << ("this" == "that") << std::endl;
+    std::cout << "(\"this\" == \"this\") : "
+              << ("this" == "this") << std::endl;
+
+    std::cout << std::endl;
+
+    // we often read `!` as "not"
+    std::cout << "(!true) : " << (!true) << std::endl;    // "not true"
+    std::cout << "(!false) : " << (!false) << std::endl;  // "not false"
+    std::cout << "(5 != 2) : " << (5 != 2) << std::endl;
+
+    std::cout << std::endl;
+
+    // `&&` means "and": true only if the left value *and* the right value are
+    // true
+    std::cout << "(true && true) : " << (true && true) << std::endl;
+    std::cout << "(true && false) : " << (true && false) << std::endl;
+    std::cout << "(false && true) : " << (false && true) << std::endl;
+    std::cout << "(false && false) : " << (false && false) << std::endl;
+
+    std::cout << std::endl;
+
+    // `||` means "or": true if either the left value *or* the right value is
+    // true
+    std::cout << "(true || true) : " << (true || true) << std::endl;
+    std::cout << "(true || false) : " << (true || false) << std::endl;
+    std::cout << "(false || true) : " << (false || true) << std::endl;
+    std::cout << "(false || false) : " << (false || false) << std::endl;
+
+    return 0;
+}
+```
+
+It looks to me like string comparisons using `==` and such aren't defined by
+the standard.  Instead, we should replace the offending lines with something
+like this:
+
+```C++
+#include <iostream>
+#include <string>    // needed for `std::string`
+#include <cstring>   // needed for `strcmp()`
+
+/**
+ * Notes:
+ * - The code `std::string("this")` casts the string literal (which is really a
+ *   cstring) to a `string` object.  If we were using `using namespace std;` it
+ *   would only be `string("this")`, and would look a little more normal.
+ *
+ * References:
+ * - string library reference (see the "compare" function, near the bottom)
+ *   http://www.cplusplus.com/reference/string/string/
+ * - `strcmp` function reference, from the cstring library
+ *   http://www.cplusplus.com/reference/cstring/strcmp/
+ */
+
+int main() {
+
+    // can't really rewrite this one.  what would it mean to say one string was
+    // less than another anyway?
+
+//     std::cout << "(\"hello\" < \"world\") : "
+//               << ("hello" < "world") << std::endl;
+
+
+    // the second two can be rewritten though
+
+    std::cout << "std::string(\"this\").compare(\"that\") : "
+              << std::string("this").compare("that")
+              << std::endl;
+
+    std::cout << "std::string(\"this\").compare(\"this\") : "
+              << std::string("this").compare("this")
+              << std::endl;
+
+    // note that we could also avoid the string library altogether, using the
+    // cstring library functions instead.  it would probably be better not to
+    // do this though, at least during this class, as it's really better form
+    // in C++ to do things the C++ way; unless for performance reasons you find
+    // you can't.
+
+    std::cout << "strcmp(\"this\", \"that\") : " 
+              << strcmp("this", "that") 
+              << std::endl;
+
+    std::cout << "strcmp(\"this\", \"this\") : " 
+              << strcmp("this", "this") 
+              << std::endl;
+
+    return 0;
+}
+```
+
+Now that we've cleared that up as, remember how binary operators are evaluated:
+`<` is one such operator, for example, taking two things, comparing them, and
+returning `true` if the left value is "smaller" than the right value, and
+`false` otherwise.  When `2 < 5;` is evaluated, the operator `<` takes `2` and
+`5`, and since 2 is less than 5, it returns `true`; which is to say that
+(almost?) anywhere you could write `true`, you could also write `(2 < 5)`.
+
+Knowing this, consider the following code.  Keep in mind that `0` is used for
+`false` and `1` (or sometimes any other nonzero value) is used for `true`.
+What do you think will be printed?
+
+```C++
+#include <iostream>
+
+int main() {
+    std::cout << (10 < 5 < 7) << std::endl;
+    return 0;
+}
+```
+
+The problem is, remember that `<` is a binary operator?  And that `true` is
+silent converted to `1`, and `false` is silently converted to `0`?  This is
+about what's happening, step by step, when the code is executed:
+
+0. `(10 < 5  < 7)`
+0. `((10 < 5) < 7)`
+0. `(( false ) < 7)`
+0. `(( 0 ) < 7)`
+0. `(0 < 7)`
+0. `( true )`
+0. `( 1 )`
+0. `1`
+
+and as we saw, `1` is precisely what gets printed.
 
 
 ### Simple Control Flow (`if`, `else`)
 
+This exercise is getting pretty long, but I feel like it'd at least be good to
+see this again, before going over it in more detail later.
+
+Have a look at the following code:
+
+```C++
+#include <iostream>
+
+int main() {
+
+    if (2 < 5) {
+        std::cout << "true\n";
+    } else {
+        std::cout << "false\n";
+    }
+
+    if (5 < 2) {
+        std::cout << "true\n";
+    } else {
+        std::cout << "false\n";
+    }
+
+    return 0;
+}
+```
+
+Try changing the conditions (the parts inside the parenthesis after `if`), even
+to things that you think won't work.  See if it compiles, and see what it does
+:)
+
+
 
 ## Challenges
 
-- TODO
+Combining the things we've learned thus far, write a program that:
+- Asks the user for an integer
+- Asks the user for one of '+', '-', '\*', or '/' (as a character)
+- Asks the user for another integer
+- Performs the given operation on the two integers, and prints out the result
+
+Notes:
+- You may assume, for now, that the user inputs the correct type of data (i.e.
+  that you don't have to check for errors when reading from `std::cin`).
+- It's fun to think that what this program does is really the beginning of how
+  interpreted languages (like Python) work.  Another example is the unix
+  program bc does.  Try typing `bc` into the terminal; then type a few math
+  expressions (like `4 * 5`), pressing "enter" after each one; type ctrl+d, or
+  `quit` when you're done :)
 
 
 ### Continuing Challenges
@@ -462,6 +711,12 @@ about](http://en.cppreference.com/w/cpp/string/basic_string).
 - **... we represent a literal binary number**: Technically, this is an
   extension to the C++ standard.  But it's implemented in GCC and Clang, and
   it's quite convenient, so we'll just use it for now.
+
+- **... why can we write ... without including the string library ...**: There
+  are multiple ways to represent a string in C++.  What we've been working with
+  up to this point have been string literals, which are really C strings, which
+  are really character arrays, and not `string` objects.  This is a good bit
+  ahead of where we are right now.
 
 
 -------------------------------------------------------------------------------
