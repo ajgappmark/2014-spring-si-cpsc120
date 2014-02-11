@@ -23,6 +23,8 @@ For Professor Smith's Thursday (lecture) Thursday (lab) section.
     - Operators
 
 - Week  4: 2014-02-13
+    - Data Types (and I/O)
+    - Preview: Simple Control Flow (`if`, `else`)
 
 - Week  5: 2014-02-20
 
