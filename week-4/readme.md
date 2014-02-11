@@ -1,5 +1,22 @@
 # Week 4
 
+## Contents
+
+- Exercise
+    - Setup
+    - Data Types (and I/O)
+        - Intro
+        - More About Integers
+        - Characters, Floats, and Casting
+        - Strings
+        - Boolean Expressions (Specifically)
+    - Simple Control Flow (`if`, `else`)
+- Challenges
+    - Continuing Challenges
+- Notes
+
+
+
 ## Exercise
 
 ### Setup
@@ -582,7 +599,7 @@ int main() {
 }
 ```
 
-Now that we've cleared that up as, remember how binary operators are evaluated:
+Now that we've cleared that up, remember how binary operators are evaluated?
 `<` is one such operator, for example, taking two things, comparing them, and
 returning `true` if the left value is "smaller" than the right value, and
 `false` otherwise.  When `2 < 5;` is evaluated, the operator `<` takes `2` and
@@ -660,6 +677,15 @@ Combining the things we've learned thus far, write a program that:
 - Asks the user for another integer
 - Performs the given operation on the two integers, and prints out the result
 
+Sample run:
+```
+Please enter an integer: 4
+Please enter an operation (+, - , *, /): *
+Please enter another integer: 5
+
+4 * 5 = 20
+```
+
 Notes:
 - You may assume, for now, that the user inputs the correct type of data (i.e.
   that you don't have to check for errors when reading from `std::cin`).
@@ -674,8 +700,8 @@ Notes:
 
 - [Learn how to use Git](http://git-scm.com/documentation)
 
-- Lean how to use Vim
-    - Type `vimtutor` into the terminal, and follow the instructions
+- Lean how to use Vim (type `vimtutor` into the terminal, and follow the
+  instructions)
 
 - [Learn Python](http://docs.python.org/3.3/tutorial/)
 
@@ -715,8 +741,9 @@ Notes:
 - **... why can we write ... without including the string library ...**: There
   are multiple ways to represent a string in C++.  What we've been working with
   up to this point have been string literals, which are really C strings, which
-  are really character arrays, and not `string` objects.  This is a good bit
-  ahead of where we are right now.
+  are really character arrays, and not `string` objects.  This information is a
+  good bit ahead of where we are right now, but I think it's pretty fun :) and
+  good to know.
 
 
 -------------------------------------------------------------------------------
