@@ -11,8 +11,7 @@
         - Strings
         - Boolean Expressions (Specifically)
     - Simple Control Flow (`if`, `else`)
-- Challenge
-    - Continuing Challenges
+- Continuing Challenges
 - Notes
 
 
