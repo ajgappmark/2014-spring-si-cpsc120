@@ -673,34 +673,7 @@ to things that you think won't work.  See if it compiles, and see what it does
 
 
 
-## Challenge
-
-Combining the things we've learned thus far, write a program that:
-- Asks the user for an integer
-- Asks the user for one of '+', '-', '\*', or '/' (as a character)
-- Asks the user for another integer
-- Performs the given operation on the two integers, and prints out the result
-
-Sample run:
-```
-Please enter an integer: 4
-Please enter an operation (+, - , *, /): *
-Please enter another integer: 5
-
-4 * 5 = 20
-```
-
-Notes:
-- You may assume, for now, that the user inputs the correct type of data (i.e.,
-  that you don't have to check for errors when reading from `std::cin`).
-- It's fun to think that what this program does is really the beginning of how
-  interpreted languages (like Python) work.  Another example is the unix
-  program bc.  Try typing `bc` into the terminal; then type a few math
-  expressions (like `4 * 5`), pressing "enter" after each one; type ctrl+d, or
-  `quit` when you're done :)
-
-
-### Continuing Challenges
+## Continuing Challenges
 
 - [Learn how to use Git](http://git-scm.com/documentation)
 
