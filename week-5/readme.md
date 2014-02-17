@@ -2,6 +2,8 @@
 
 ## Contents
 
+<!-- TODO -->
+
 
 
 ## Exercise
@@ -11,12 +13,16 @@ Again, if you get done early, please help a friend :)
 
 ### Setup
 
+
+### Simple Control Flow (`if`, `else`)
+
 We have finally gotten to that part of the course where everything you need to
 know can be googled with relative ease.
 
 
+### Challenge
 
-## Challenge
+
 
 ## Continuing Challenges
 
