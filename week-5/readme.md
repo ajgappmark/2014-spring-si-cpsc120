@@ -8,11 +8,8 @@ Josh, the instructor, or whoever you're most comfortable with.  You can do it!
 But you have to try.
 
 **Important:** Today's exercise is also today's lab.  Please let the Professor
-or me see your code before you turn it in, to make sure it's right, so you can
-have full credit :) .
-
-You will have 4 things all together to turn in (on Titanium, preferably as
-separate files):
+or me see your code before you submit it.  You will have 4 things all together
+to turn in (on Titanium, preferably as separate files):
 - example-1.cpp
 - example-2.cpp
 - example-3.cpp
@@ -20,6 +17,7 @@ separate files):
 
 For each of these, before turning the file in, make sure to add a comment at
 the top containing
+
 0. Your name
 0. The week ("week 5" today)
 0. The name of the program (the same as the filename, except without the
@@ -403,6 +401,10 @@ at the top, and set the file aside for turning in.
 
 ### Challenge
 
+You may turn these files in as well, if you like, but you don't need to.  If
+you do, please use non-confusing names :) (like `calculator--challenge-1.cpp`
+or so).
+
 Keeping one file for each new version of the program, do the following:
 
 0. Look up switch statements, and rewrite the "calculator" program using those.
@@ -413,10 +415,6 @@ Keeping one file for each new version of the program, do the following:
 0. If you haven't already, make exponentiation work with fractional exponents
    :)
     - What trade-offs does your approach make?
-
-You may turn these files in as well, if you like, but you don't need to.  If
-you do, please use non-confusing names :) (like `calculator--challenge-1.cpp`
-or so).
 
 
 
