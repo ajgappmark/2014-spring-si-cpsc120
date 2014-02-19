@@ -8,8 +8,9 @@ Josh, the instructor, or whoever you're most comfortable with.  You can do it!
 But you have to try.
 
 **Important:** Today's exercise is also today's lab.  Please let the Professor
-or me see your code before you submit it.  You will have 4 things all together
-to turn in (on Titanium, preferably as separate files):
+see your code before you submit it, so he can check you off.  You will have 4
+things all together to turn in (on Titanium, preferably as separate files,
+optionally as a single zip file):
 - example-1.cpp
 - example-2.cpp
 - example-3.cpp
