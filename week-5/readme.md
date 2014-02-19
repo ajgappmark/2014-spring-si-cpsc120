@@ -7,13 +7,35 @@ yourself until you're comfortable.  If you need help, please ask a friend, me,
 Josh, the instructor, or whoever you're most comfortable with.  You can do it!
 But you have to try.
 
+**Important:** Today's exercise is also today's lab.  Please let the Professor
+or me see your code before you turn it in, to make sure it's right, so you can
+have full credit :) .
+
+You will have 4 things all together to turn in (on Titanium, preferably as
+separate files):
+- example-1.cpp
+- example-2.cpp
+- example-3.cpp
+- calculator.cpp
+
+For each of these, before turning the file in, make sure to add a comment at
+the top containing
+0. Your name
+0. The week ("week 5" today)
+0. The name of the program (the same as the filename, except without the
+   ".cpp" at the end)
+
 
 
 ## Contents
 
 - Exercise
     - Setup
-    -  Simple Control Flow (`if`, `else`)
+    - Simple Control Flow (`if`, `else`)
+        - Example 1
+        - Example 2
+        - Example 3
+    - Calculator
     - Challenge
 - Continuing Challenges
 
@@ -26,29 +48,29 @@ Again, if you get done early, please help a friend :)
 
 ### Setup
 
-You are now free to use any programming environment you wish for the exercise
-(as you always have been for the lab on Titanium).  One environment may be
-better than another in some specific circumstance (e.g., if you're programming
-in Windows you probably want Visual Studio, and if you're writing an app for
-your iPhone you probably want Xcode) but in general, now that you've been
-exposed to two or three, it's up to you which you prefer :) .
+You are now free to use any programming environment you wish for the exercise.
+One environment may be better than another in some specific circumstance (e.g.,
+if you're programming in Windows you probably want Visual Studio, and if you're
+writing an app for your iPhone you probably want Xcode) but in general, now
+that you've been exposed to two or three, it's up to you which you prefer :) .
+- If you need instructions for using the terminal, please see [week-3's
+  lab](../week-3/readme.md).
+- If you need instructions for using Visual Studio, please see the lovely Word
+  document Josh made up.  (If you're in the Tuesday section, you should have
+  this already.  If not, please get it from someone who got it from someone who
+  is :) I've seen it around on Thursday.)
 
-Along with that, any code you see from now on may be copied and pasted, if you
-like, instead of you having to type it out yourself.  If you're not feeling
-confident with something, you may wish to type it out yourself anyway, for
-practice.
+Along with this newfound freedom, most any code you see from now on may be
+copied and pasted, if you like, instead of you having to type it out yourself.
+Just make sure you *understand* what you're putting in your program, or it'll
+end up biting you later.  If you're not feeling confident with something, you
+may wish to type it out yourself anyway, for practice.
 
-Please get your favorite programming environment ready, so you can try out the
-code below.
+Now, please get your favorite programming environment ready, so you can try out
+the code below :)
 
 
 ### Simple Control Flow (`if`, `else`)
-
-If you finished the previous lab early, you're welcome to skip to the challenge
-if you like.  You may want to skim this, to see if there's anything you find
-interesting ;)
-
-For the rest of us, let's take things a bit more slowly.
 
 We have finally gotten to that part of the course where everything you haven't
 seen before can be googled with relative ease.  Learning from the internet is a
@@ -121,7 +143,7 @@ int main() {
         else
             cout << "Your integer is odd\n";
 
-    } else if (x < 100) {
+    } else if (x < 1000) {
         cout << "Your integer is fairly small\n";
 
         if (x % 2 == 0)
@@ -129,7 +151,7 @@ int main() {
         else
             cout << "Your integer is odd\n";
 
-    } else {
+    } else {  // x >= 1000
         cout << "Your integer is fairly large\n";
 
         if (x % 2 == 0)
@@ -198,6 +220,11 @@ Once you're done (and not before) take a look at
 :) -- but if it doesn't, that's okay, as long as it works, and you like the way
 it looks.
 
+If you notice anything you need to fix, you can fix it.  Once you have
+something working (but *not* directly copied from the solution on github, lol),
+set the file aside, for turning in at the end of this exercise.  Be sure to
+name it appropriately, and don't forget to put your name and stuff at the top.
+
 #### Example 2
 
 Imagine you ask the user to enter a character.  You want to tell them whether
@@ -216,7 +243,8 @@ int main() {
     cout << "Please enter a character: ";
     cin >> c;
 
-    if ( (c >= 33 && c <= 47) || (c >= 91 && c <= 96) || (c >= 123 && c <= 126) ) {
+    if ( (c >= 33 && c <= 47) || (c >= 91 && c <= 96)
+                              || (c >= 123 && c <= 126) ) {
 
         cout << "'" << c << "' is a symbol\n";
 
@@ -246,6 +274,8 @@ int main() {
   of) to make sure it works.
 
 - If you're not sure about something, ask :)
+
+Once you're done, set this file aside as well.  You will be turning it in also.
 
 #### Example 3
 
@@ -331,12 +361,17 @@ Hints:
   know was wrong, and that makes the compiler generate *more* error messages,
   that's okay.
 
+Once it's working, set the corrected (compiling and correctly running) file
+aside for turning in.  Be sure to name it appropriately, and add your name and
+stuff to the top of this one too.
 
-### Challenge
 
-The following program prompt may be the same as the lab on Titanium.  That's
-okay: the part that's supposed to be a challenge is the numbered list at the
-end.
+### Calculator
+
+Try to do this one, as much as possible, without looking at your notes or
+anything else.  In general, it's a very good habit to look up things you're not
+sure of online, but for this particular program, if you're stuck, please try to
+ask a friend first.
 
 Combining the things we've learned thus far, write a program that:
 - Asks the user for an integer
@@ -362,16 +397,26 @@ Notes:
   expressions (like `4 * 5`), pressing "enter" after each one; type ctrl+d, or
   `quit` when you're done :)
 
+When you're done, be sure to name the file correctly, put your name and stuff
+at the top, and set the file aside for turning in.
 
-Keeping one file for each version of the program:
 
-0. Look up switch statements, and rewrite the program using those.
+### Challenge
+
+Keeping one file for each new version of the program, do the following:
+
+0. Look up switch statements, and rewrite the "calculator" program using those.
 0. Try adding `^` as an operator, for exponentiation.
 0. Now switch to using `**` for exponentiation (like Python does).
     - Can you still use use a `char` variable to store your operator, and a
       switch statement to decide on the appropriate action?
-0. If you haven't already, make exponentiation work with fractional exponents :)
+0. If you haven't already, make exponentiation work with fractional exponents
+   :)
     - What trade-offs does your approach make?
+
+You may turn these files in as well, if you like, but you don't need to.  If
+you do, please use non-confusing names :) (like `calculator--challenge-1.cpp`
+or so).
 
 
 

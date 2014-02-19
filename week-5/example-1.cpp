@@ -1,3 +1,9 @@
+/**
+ * Ben Blazak
+ * week 5
+ * example-1
+ */
+
 #include <iostream>
 using std::cin;
 using std::cout;
