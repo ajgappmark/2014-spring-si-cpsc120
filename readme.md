@@ -27,6 +27,7 @@ For Professor Smith's Thursday (lecture) Thursday (lab) section.
     - Preview: Simple Control Flow (`if`, `else`)
 
 - Week  5: 2014-02-20
+    - Simple Control Flow (`if`, `else`)
 
 - Week  6: 2014-02-27
 
