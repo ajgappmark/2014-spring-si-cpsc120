@@ -38,29 +38,32 @@ like, instead of you having to type it out yourself.  If you're not feeling
 confident with something, you may wish to type it out yourself anyway, for
 practice.
 
-Please get your favorite programming environment ready, so you can try out all
-the code below.
+Please get your favorite programming environment ready, so you can try out the
+code below.
 
 
 ### Simple Control Flow (`if`, `else`)
 
 If you finished the previous lab early, you're welcome to skip to the challenge
-if you like.
+if you like.  You may want to skim this, to see if there's anything you find
+interesting ;)
 
-For the rest of us, let's take this a bit more slowly.
+For the rest of us, let's take things a bit more slowly.
 
 We have finally gotten to that part of the course where everything you haven't
 seen before can be googled with relative ease.  Learning from the internet is a
 skill I've found to be extremely valuable in programming, and for that reason
-(and not because I'm lazy), you are going to teach yourself about `if`/`else`
-statements today.
+(and not because I'm lazy, I hope), you are going to teach yourself about
+`if`/`else` statements today.
 
 Visit [this page](http://www.cplusplus.com/doc/tutorial/control/) (on
 cplusplus.com) and read *only* the intro (at the top) and the section titled
 "Selection statements: if and else".  (Reading more won't hurt you, but we'll
 cover that stuff later.)  If you don't understand something, ask :) .
 
-Now consider the following code:
+#### Example 1
+
+Consider the following code:
 ```C++
 #include <iostream>
 using std::cin;
@@ -77,7 +80,7 @@ int main() {
         cout << "Your integer is negative\n";
     } else if (x < 100) {
         cout << "Your integer is fairly small\n";
-    } else {
+    } else {  // x >= 100
         cout << "Your integer is fairly large\n";
     }
 
@@ -85,14 +88,13 @@ int main() {
 }
 ```
 
-- Read this program *very carefully*, run it a few times with different values
+- Read this program very carefully, run it a few times with different values
   (try `-4`, `42`, and `100`, if you like), and get a feel for what it's doing.
   Especially, think about which values cause which outputs.  When you're sure
   that you know what the program will do for any output, then continue.
 
 - Change the program so that it only outputs "Your integer is fairly large"
-  with the integer is greater than 999 (i.e., if the integer is not less than
-  1000).
+  with the integer is greater than or equal to 1000.
 
 Now we wish to be able to tell the user where their integer is even or odd, in
 addition to whether it is large or small.  Recall that the modulus operator,
@@ -140,65 +142,68 @@ int main() {
 }
 ```
 
-Notice that, when we have only one statement inside the body of our if
-statement, we don't need the braces (`{` and `}`), so that
-```C++
-if (x < 0) {
-    cout << "Your integer is negative\n";
-}
-```
-is the same as
-```C++
-if (x < 0)
-    cout << "Your integer is negative\n";
-```
-
-Also notice that we may have if statements inside of one another; these are
-called *nested if statements*.
-
-Finally, notice that we do not put a semicolon after the ending `}` of our if
-statement, but we do put a semicolon after each statement inside the body of
-the if statement.
-
-Remember that if there is more than one statement inside the body of the if,
-you **always** need braces.
-
 - Read this program carefully as well.  Make sure you know what it will do for
   any input you can think of.
 
-- Now, repeated (copy and pasted) code is kind of lame.  We have
+- Notice that, when we have only one statement inside the body of our if
+  statement, we don't need the braces (`{` and `}`), so that
   ```C++
-  if (x % 2 == 0)
-      cout << "Your integer is even\n";
-  else
-      cout << "Your integer is odd\n";
+  if (x < 0) {
+      cout << "Your integer is negative\n";
+    }
   ```
-  repeated three times in our code above!  Not cool.  Delete it from the body
-  of each if statement, and then put it back into the program *only once*,
-  right before the `return 0;`.  The program should do the same thing.  If it
-  doesn't, that's okay: keep working on it till it does.
+  is the same as
+  ```C++
+  if (x < 0)
+      cout << "Your integer is negative\n";
+  ```
 
-- Now, we also want to know whether the integer is evenly divisible by 3.  We
-  know that if an integer is evenly divisible by 3, the remainder when that
-  integer is divided by 3 will be 0.  Add to your program so that when the user
-  enters `5`, the output looks like this:
-  ```
-  Please enter an integer: 5
-  Your integer is fairly small
-  Your integer is odd
-  Your integer is not evenly divisible by 3
-  ```
+- Also notice that we may have if statements inside of one another; these are
+  called *nested if statements*.
+
+- Finally, notice that we do not put a semicolon after the ending `}` of our if
+  statement, but we do put a semicolon after each statement inside the body of
+  the if statement.
+
+- Remember that if there is more than one statement inside the body of the if,
+  you **always** need braces.
+
+Repeated (copy and pasted) code is kind of lame though.  We have
+```C++
+if (x % 2 == 0)
+    cout << "Your integer is even\n";
+else
+    cout << "Your integer is odd\n";
+```
+repeated three times in our code above!  Not cool.
+
+- Delete this repeated code from the body of each if statement, and then put it
+  back into the program *only once*, right before the `return 0;`.  The program
+  should do the same thing.  If it doesn't, that's okay: keep working on it
+  till it does.
+
+Finally, we also want to know whether the integer is evenly divisible by 3.  We
+know that if an integer is evenly divisible by 3, the remainder when that
+integer is divided by 3 will be 0.  Add to your program so that when the user
+enters `5`, the output looks like this:
+```
+Please enter an integer: 5
+Your integer is fairly small
+Your integer is odd
+Your integer is not evenly divisible by 3
+```
 
 Once you're done (and not before) take a look at
 [example-1.cpp](./example-1.cpp).  Your program should look something like this
 :) -- but if it doesn't, that's okay, as long as it works, and you like the way
 it looks.
 
+#### Example 2
 
-One more example, before we move on.  Imagine you ask the user to enter a
-character.  You want to tell them whether it was a symbol, a number, an upper
-case character, a lower case character, or none of those things.  Take a look
-at [this ASCII table](http://www.asciitable.com).  We start out by writing :
+Imagine you ask the user to enter a character.  You want to tell them whether
+it was a symbol, a number, an upper case character, a lower case character, or
+none of those things.  Take a look at [this ASCII
+table](http://www.asciitable.com).  We start out by writing :
 ```C++
 #include <iostream>
 using std::cin;
@@ -235,17 +240,19 @@ int main() {
 }
 ```
 
-- Fill in code that should be in place of the `TODO` comments.
+- Fill in the code that should be in place of the `/* TODO: ... */` comments.
 
 - Test your program thoroughly (enter as many random inputs as you can think
   of) to make sure it works.
 
 - If you're not sure about something, ask :)
 
+#### Example 3
 
-Finally, an exercise for good practice:  I'm sitting beside you and I wrote the
-following code.  But it won't compile!  And I don't know why.  I am not
-happy.  What did I do wrong?
+This one's for review, and practice.
+
+So, I'm sitting beside you and I wrote the following code.  But it won't
+compile!  And I don't know why.  I am not happy.  What did I do wrong?
 
 ```C++
 #include <iostream>
@@ -265,14 +272,17 @@ int main() {
          << " 1: Charles Dickens\n"
          << " 2: Dr. Seuss\n"
          << " 3: Albert Einstein\n"
+         << " 4: Anna of Arendell\n"
          << "--------------------\n"
-         << "\n"
-         << "Enter the number of the person to display a quote from (1, 2, or 3): "
+         << "\n";
+    cout << "Enter the number of the person to display a quote from"
+         << " (1, 2, 3, or 4): "
     cin >> choice;
 
     cout << "\n";
 
-    cout << "-----------------------------------------------------------------------------\n";
+    cout << "-----------------------------------------"
+         << "--------------------------------------\n";
 
     if (choice == 1) {
         cout << "It was the best of times,\n"
@@ -293,11 +303,15 @@ int main() {
     } else if (choice == 3) {
         cout << "A person who never made a mistake never tried anything new.\n"
              << "  -- Albert Einstein\n";
+    } else if (choice == 4) {
+        cout << "Do you wanna build a ☃ ?\n"
+             << "  -- Anna of Arendell, \"Frozen\"\n";
     } else {
         cout << "That is not a valid option!\n";
     }
 
-    cout << "-----------------------------------------------------------------------------\n"
+    cout << "-----------------------------------------"
+         << "--------------------------------------\n"
          << "\n";
 
     return 0;  // success
@@ -306,20 +320,23 @@ int main() {
 
 Hints:
 - It was working, but I changed precisely 3 things (a total of 1 character
-  removed, 1 character added, and 2 characters changed).
+  removed, 1 character added, and 2 characters replaced).
 - Start with the topmost error message, and *read it carefully*!  Sometimes
   many of the error messages are because of only one error.
 - Notice what line number it says the error is on, and look near there for
-  anything that looks wrong.
+  anything that seems wrong.  Try not to guess, if you can help it: think
+  carefully first, and try to remember what you've seen thus far in working
+  programs.
 - One of the errors might be masking another.  If you fix something that you
-  know was wrong, and that makes it generate *more* error messages, that's
-  okay.
+  know was wrong, and that makes the compiler generate *more* error messages,
+  that's okay.
 
 
 ### Challenge
 
-Note that the following program prompt may be the same as the lab on Titanium.
-If so, skip to the numbered list at the end of this section.
+The following program prompt may be the same as the lab on Titanium.  That's
+okay: the part that's supposed to be a challenge is the numbered list at the
+end.
 
 Combining the things we've learned thus far, write a program that:
 - Asks the user for an integer
@@ -354,6 +371,7 @@ Keeping one file for each version of the program:
     - Can you still use use a `char` variable to store your operator, and a
       switch statement to decide on the appropriate action?
 0. If you haven't already, make exponentiation work with fractional exponents :)
+    - What trade-offs does your approach make?
 
 
 
