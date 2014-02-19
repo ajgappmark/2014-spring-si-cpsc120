@@ -33,6 +33,14 @@ in Windows you probably want Visual Studio, and if you're writing an app for
 your iPhone you probably want Xcode) but in general, now that you've been
 exposed to two or three, it's up to you which you prefer :) .
 
+Along with that, any code you see from now on may be copied and pasted, if you
+like, instead of you having to type it out yourself.  If you're not feeling
+confident with something, you may wish to type it out yourself anyway, for
+practice.
+
+Please get your favorite programming environment ready, so you can try out all
+the code below.
+
 
 ### Simple Control Flow (`if`, `else`)
 
@@ -86,7 +94,7 @@ int main() {
   with the integer is greater than 999 (i.e., if the integer is not less than
   1000).
 
-Now we wish to be able to tell the use where their integer is even or odd, in
+Now we wish to be able to tell the user where their integer is even or odd, in
 addition to whether it is large or small.  Recall that the modulus operator,
 `%`, returns the remainder after the left hand number is divided by the right
 hand one, so that `3 % 2` gives the remainder after 3 is divided by 2, which
@@ -144,12 +152,16 @@ is the same as
 if (x < 0)
     cout << "Your integer is negative\n";
 ```
-Remember that if there is more than one statement inside the body of the if,
-you **always** need braces.
 
-Also notice that we do not put a semicolon after the ending `}` of our if
+Also notice that we may have if statements inside of one another; these are
+called *nested if statements*.
+
+Finally, notice that we do not put a semicolon after the ending `}` of our if
 statement, but we do put a semicolon after each statement inside the body of
 the if statement.
+
+Remember that if there is more than one statement inside the body of the if,
+you **always** need braces.
 
 - Read this program carefully as well.  Make sure you know what it will do for
   any input you can think of.
@@ -161,10 +173,10 @@ the if statement.
   else
       cout << "Your integer is odd\n";
   ```
-  repeated three times!  Delete it from the body of each if statement, and then
-  put it back into the program *only once*, right before the `return 0;`.  The
-  program should do the same thing.  If it doesn't, that's okay: keep working
-  on it till it does.
+  repeated three times in our code above!  Not cool.  Delete it from the body
+  of each if statement, and then put it back into the program *only once*,
+  right before the `return 0;`.  The program should do the same thing.  If it
+  doesn't, that's okay: keep working on it till it does.
 
 - Now, we also want to know whether the integer is evenly divisible by 3.  We
   know that if an integer is evenly divisible by 3, the remainder when that
@@ -179,15 +191,14 @@ the if statement.
 
 Once you're done (and not before) take a look at
 [example-1.cpp](./example-1.cpp).  Your program should look something like this
-:) -- but if it doesn't, that's okay, as long as it works, and you think it
-looks pretty.
+:) -- but if it doesn't, that's okay, as long as it works, and you like the way
+it looks.
 
 
-One more example, before you move on.  Imagine you ask the user to enter a
+One more example, before we move on.  Imagine you ask the user to enter a
 character.  You want to tell them whether it was a symbol, a number, an upper
 case character, a lower case character, or none of those things.  Take a look
-at [this ASCII table](http://www.asciitable.com).  We start out by writing
-(please type this out yourself):
+at [this ASCII table](http://www.asciitable.com).  We start out by writing :
 ```C++
 #include <iostream>
 using std::cin;
@@ -234,7 +245,7 @@ int main() {
 
 Finally, an exercise for good practice:  I'm sitting beside you and I wrote the
 following code.  But it won't compile!  And I don't know why.  I am not
-happy...  What did I do wrong?
+happy.  What did I do wrong?
 
 ```C++
 #include <iostream>
@@ -294,10 +305,10 @@ int main() {
 ```
 
 Hints:
-- After I got it working, I changed precisely 3 things (a total of 1 character
+- It was working, but I changed precisely 3 things (a total of 1 character
   removed, 1 character added, and 2 characters changed).
 - Start with the topmost error message, and *read it carefully*!  Sometimes
-  many error messages are because of only one error.
+  many of the error messages are because of only one error.
 - Notice what line number it says the error is on, and look near there for
   anything that looks wrong.
 - One of the errors might be masking another.  If you fix something that you
@@ -307,8 +318,8 @@ Hints:
 
 ### Challenge
 
-Note: The following program prompt may be the same as the lab on Titanium.  If
-so, skip to the numbered list at the end of this section.
+Note that the following program prompt may be the same as the lab on Titanium.
+If so, skip to the numbered list at the end of this section.
 
 Combining the things we've learned thus far, write a program that:
 - Asks the user for an integer
