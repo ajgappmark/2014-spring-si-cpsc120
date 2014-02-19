@@ -228,7 +228,7 @@ name it appropriately, and don't forget to put your name and stuff at the top.
 Imagine you ask the user to enter a character.  You want to tell them whether
 it was a symbol, a number, an upper case character, a lower case character, or
 none of those things.  Take a look at [this ASCII
-table](http://www.asciitable.com).  We start out by writing :
+table](http://www.asciitable.com).  We start out by writing:
 ```C++
 #include <iostream>
 using std::cin;
