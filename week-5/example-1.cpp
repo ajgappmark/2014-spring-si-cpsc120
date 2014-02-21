@@ -17,9 +17,9 @@ int main() {
 
     if (x < 0) {
         cout << "Your integer is negative\n";
-    } else if (x < 100) {
+    } else if (x < 1000) {
         cout << "Your integer is fairly small\n";
-    } else {
+    } else {  // x >= 1000
         cout << "Your integer is fairly large\n";
     }
 
