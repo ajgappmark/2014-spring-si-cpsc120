@@ -41,4 +41,6 @@ A place for thoughts and possible revisions.
 - Everybody finished before lab was over!  A few came close to taking longer,
   but I saw nothing there to be worried about, and this is really encouraging
   :) .
+- By far the most common error I saw was to use a `+` instead of a `'+'` when
+  testing for which operator was entered by the user in the calculator program.
 
