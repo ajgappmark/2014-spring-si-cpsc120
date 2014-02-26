@@ -23,11 +23,11 @@
 - For each of the files, before turning it in, make sure to add a comment at
   the top containing
 
-0. Your name
-0. The week ("week 6" today)
-0. The name of the program (preferably either the name of the section the file
-   corresponds to below, or same as the filename except without the ".cpp" at
-   the end)
+    0. Your name
+    0. The week ("week 6" today)
+    0. The name of the program (preferably either the name of the section the
+       file corresponds to below, or same as the filename except without the
+       ".cpp" at the end)
 
 
 
