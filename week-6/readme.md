@@ -17,16 +17,17 @@
 ## Instructions
 
 - Once again, today's exercise is also today's lab.  Please make sure to let
-  the professor see your code before you submit it, so he can check you off.
+  the professor see your code (and show him that it works correctly) before you
+  submit it, so he can check you off.
 
 - For each of the files, before turning it in, make sure to add a comment at
   the top containing
 
-  0. Your name
-  0. The week ("week 6" today)
-  0. The name of the program (preferably either the name of the section the
-     file corresponds to below, or same as the filename except without the
-     ".cpp" at the end)
+0. Your name
+0. The week ("week 6" today)
+0. The name of the program (preferably either the name of the section the file
+   corresponds to below, or same as the filename except without the ".cpp" at
+   the end)
 
 
 
@@ -864,7 +865,8 @@ script](http://macosxautomation.com/applescript/firsttutorial/index.html) if
 you like) to automate the testing of the code in this project for you.
 
 - There may be better tutorials for expect and applescript; I have a lot of
-  experience with the page for bash scripting though, and IMO it's really good.
+  experience with the page linked above for bash scripting though, and IMO it's
+  really good.
 
 - Necessarily, this is a Linux / Mac / Cygwin (on Windows) only challenge.
 
