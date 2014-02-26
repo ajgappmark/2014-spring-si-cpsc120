@@ -821,7 +821,7 @@ follows:
           [on google](https://www.google.com/search?client=safari&rls=en&q=5+usd+in+eur&ie=UTF-8&oe=UTF-8#q=1000000+usd+in+eur&rls=en).
           Please use the most accurate rate you can (reasonably) find.
         - If you wish, you can output the result of this operator specially,
-          putting a '$' in front of it, and showing exactly 2 decimal places
+          putting a '€' in front of it, and showing exactly 2 decimal places
           (look up "fixed" and "setprecision", which belong to the \<iomanip\>
           library, if you'd like), but this is not required; printing just the
           number is good enough.
@@ -847,7 +847,7 @@ Please enter an expression (like `4 * 5` or `abs -5`): 5 mod 4
 ```
 ```
 Please enter an expression (like `4 * 5` or `abs -5`): convert-usd-eur 1
-convert-usd-eur 1 = $0.73
+convert-usd-eur 1 = €0.73
 ```
 ```
 Please enter an expression (like `4 * 5` or `abs -5`): convert-f-c 212
