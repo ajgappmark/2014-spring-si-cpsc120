@@ -483,11 +483,11 @@ References:
 
 Sample runs:
 ```
-Please enter an expression (like `4 * 5` or `floor 5`): 4 * 5
+Please enter an expression (like `4 * 5` or `ln 5`): 4 * 5
 4 * 5 = 20
 ```
 ```
-Please enter an expression (like `4 * 5` or `floor 5`): ln 5
+Please enter an expression (like `4 * 5` or `ln 5`): ln 5
 ln 5 = 1.60944
 ```
 
