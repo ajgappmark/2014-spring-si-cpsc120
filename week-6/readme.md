@@ -400,7 +400,7 @@ from last week (or your solution, if you prefer), and modify it to
 
 You will need to use a `string` member function to compare strings for
 equality; see the references below.  If you get a little stuck, you can see
-[a solution for challenge 4](./solution--lab-5--calculator--challeng-4.cpp)
+[a solution for challenge 4](./solution--lab-5--calculator--challenge-4.cpp)
 from last week.
 
 After you're done with that, see the references below for the cmath library (or
@@ -408,7 +408,7 @@ look it up online yourself), and add the following operator to your calculator:
 - `**` for exponentiation
 
 Again, you can see
-[a solution for challenge 4](./solution--lab-5--calculator--challeng-4.cpp)
+[a solution for challenge 4](./solution--lab-5--calculator--challenge-4.cpp)
 from last week if you get a little stuck.
 
 At this point, we're going to do something a little different.  Most of the
