@@ -30,6 +30,9 @@ For Professor Smith's Thursday (lecture) Thursday (lab) section.
     - Simple Control Flow (`if`, `else`)
 
 - Week  6: 2014-02-27
+    - Review: Boolean Expressions
+    - Predefined Functions (a.k.a. Library Functions)
+    - Preview: User Defined Functions
 
 - Week  7: 2014-03-06
 
