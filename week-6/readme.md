@@ -431,7 +431,9 @@ while (    cin.peek() == ' '  || cin.peek() == '\t'
         || cin.peek() == '\f' || cin.peek() == '\r' )
     cin.get();
 ```
-Directly below this, write some if/else statements that do the following:
+Directly below this (using `cin.peek()` to read the next character on the input
+stream without consuming it), write some if/else statements that do the
+following:
 - If the first character on the input stream is a lower case letter
     - Read in the operation and the single number following it
         - In this case, user input should look like "sqrt 9" or "ln 5"
