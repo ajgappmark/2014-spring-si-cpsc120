@@ -4,8 +4,6 @@ A place for thoughts and possible revisions.
 (comments, complaints, or anything) please let me know!  Maybe email me :) .
 
 
-# TODO
-
 ## Week 1
 - Since this is a 100 level course, maybe it's okay to have week-1 as an intro
   to everything, without a whole bunch of content, to give people a second to
@@ -23,11 +21,6 @@ A place for thoughts and possible revisions.
   `<cmath>`), neither of which we've gone over yet.  But, one student noticed
   this (without any prompting) and another was able to look up `pow()` very
   quickly once I told him it existed, so maybe it's okay :) .
-
-
-# Thoughts
-
-## Week 5
 - This is the first week where things are more of an experiment than a
   tutorial.  Yay!
 - It's also the first week that this exercise is being used as the lab (to turn
@@ -43,4 +36,27 @@ A place for thoughts and possible revisions.
   :) .
 - By far the most common error I saw was to use a `+` instead of a `'+'` when
   testing for which operator was entered by the user in the calculator program.
+
+## Week 6
+- Needs to be organized more simply, and probably a bit easier.
+- Should have spent more time on Boolean stuff earlier (that's okay... we'll
+  work on it next week :) ).
+    - A lot of people had a real conceptual problem with the idea of `if (i)
+      ...` (for some `int` called `i`) in part 2 of "Review: Boolean
+      Expressions".
+    - A few people (at least) weren't able to fix all the errors in "Warm-up:
+      Broken Code".  Didn't have time to see what all of their questions
+      were...  I did see a few people having a problem understanding the error
+      in `if (choice == 'y' || 'Y') ...`.
+    - The instructions for "Predefined Functions (a.k.a. Library Functions)"
+      might not have been clear enough.  Not sure how they could be improved at
+      the moment though...
+- Almost no one got to "Preview: User Defined Functions".  I think the concepts
+  that were there might just be rolled into Week 8's lab, or whenever it's
+  convenient.
+- It seems like people tend to read the exercise and write the program in
+  tandem with each other (instead of reading the whole subsection and then
+  writing the program).  This is not a bad thing...  It does mean that in the
+  future I should probably put anything I wish everyone to see (like "Sample
+  runs") at the beginning.
 
