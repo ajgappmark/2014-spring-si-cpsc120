@@ -1,0 +1,52 @@
+--- broken-broken.cpp	2014-02-23 22:35:59.000000000 -0800
++++ broken-fixed.cpp	2014-02-23 22:35:33.000000000 -0800
+@@ -1,9 +1,10 @@
+-#include <iostraem>
++#include <iostream>
++using std::cin;
+ using std::cout;
+ using std::endl;
+ 
+ int main() {
+-    char choie;  // for the user's input
++    char choice;  // for the user's input
+ 
+ 
+     // prompt for the user's choice
+@@ -22,11 +23,11 @@
+ 
+     // respond to the user's choice!
+ 
+-    if (choice == 'y' || 'Y')
+-        cout << "Me too!\n;
+-    else if (choice == 'n' || 'N')
++    if (choice == 'y' || choice == 'Y')
++        cout << "Me too!\n";
++    else if (choice == 'n' || choice == 'N')
+         cout << "Me neither?\n";
+-    else {
++    else
+         cout << "I don't understand :(\n";
+ 
+     cout << endl;
+@@ -50,9 +51,9 @@
+ 
+     char start;  // the character to begin printing from
+ 
+-    if (choice == "Y" || "N") {
++    if (choice == 'Y' || choice == 'N') {
+         start = 'A';
+-    } else if (choice == "y" || "n") {
++    } else if (choice == 'y' || choice == 'n') {
+         start = 'a';
+     } else {
+         cout << "I am unhappy.  Terminating.\n";
+@@ -62,7 +63,7 @@
+     cout << "The letters from '" << start << "' to '" << choice << "' are:\n";
+ 
+     for (char c=start; c<=choice; c++)
+-        cout << c >> " ";
++        cout << c << " ";
+ 
+     cout << endl;
+ 
