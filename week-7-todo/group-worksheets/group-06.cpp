@@ -30,7 +30,7 @@ int main() {
 
 
 
-    cout << ( a > a || b == b == +b || a == c || b || -b <= c * b + -b != b == a > ( c == b == b ) == -a ) << endl;
+    cout << ( c || c || b <= a == (23%7) < c < c <= b < -( (17/3) < a * b < b + +(3/11) <= a ) != !b ) << endl;
 
 
 
