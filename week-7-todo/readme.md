@@ -9,17 +9,15 @@
 
 ## Instructions
 
-TODO:
-- Next class is going to be
-    - briefly switch statements
-    - boolean review
-    - boolean worksheet
-- Next lab is going to be myprogramminglab for
-    - booleans
-    - if/else statements
-    - switch statements
+Today, since we're focusing on boolean expressions, the lab is
+myprogramminglab.
 
-- I said I'd write a boolean worksheet for during class
+If we have extra time (before or after) and you have any questions *please* ask
+:) .
+
+Also, if you have extra time, you may wish to review the exercises from [last
+week](../week-6).  Solutions are posted in [the week-7 folder](.), for after
+you've tried everything by yourself (or with friends) at least once.
 
 
 

@@ -1,6 +1,6 @@
 /**
  * Ben Blazak
- * week 8
+ * week 7
  * worksheet -- truth tables
  */
 

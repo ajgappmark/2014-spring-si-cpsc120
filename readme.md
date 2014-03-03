@@ -35,6 +35,9 @@ For Professor Smith's Thursday (lecture) Thursday (lab) section.
     - Preview: User Defined Functions
 
 - Week  7: 2014-03-06
+    - Boolean Expressions
+    - If/Else Statements
+    - Switch Statements
 
 - Week  8: 2014-03-13
 
