@@ -15,6 +15,8 @@ def gen_expression(length):
     prefix_operators = (
             '!', '+', '-',
             '!',      '-',
+            '!',      '-',
+            '!',
             '!',
             '', '', '', '', '',
             '', '', '', '', '',
@@ -97,8 +99,8 @@ def gen_expression(length):
 if __name__ == '__main__':
     e = ''
 
-    while not e or len(e) > 97:
-        e = gen_expression(random.randint(15,20))
+    while not e or len(e) < 80 or len(e) > 97:
+        e = gen_expression(random.randint(10,20))
 
     print(e)
 
