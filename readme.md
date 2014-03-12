@@ -38,6 +38,7 @@ For Professor Smith's Thursday (lecture) Thursday (lab) section.
     - Boolean Expressions
 
 - Week  8: 2014-03-13
+    - Loops (and program design)
 
 - Week  9: 2014-03-20
 
