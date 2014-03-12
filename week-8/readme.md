@@ -14,10 +14,6 @@
 This exercise should be compiler agnostic -- that is, you should be able to do
 it in Visual Studio, the Terminal, or any environment you like.
 
-There is an executable ([for mac](./num2roman), [for windows? TODO](.)) built
-from my solution to this exercise on github.  Feel free to play with it a bit,
-and see how it works.
-
 
 ### Converting Numbers to Roman Numerals
 
@@ -81,6 +77,25 @@ Please note that this step will probably be the most difficult.  You'll have to
 think about it, really hard, until you reach a revelation.  If you don't right
 away, that's okay!  Keep trying.  If you feel stuck, start trying things out on
 paper.  See if you can experiment your way into something that looks promising.
+
+Sample run:
+
+> Please enter an integer: 123
+> --> CXXIII
+> 
+> Would you like to convert another integer (Y/N)? y
+> 
+> 
+> Please enter an integer: 401
+> --> CDI
+> 
+> Would you like to convert another integer (Y/N)? y
+> 
+> 
+> Please enter an integer: 1299
+> --> MCCXCIX
+> 
+> Would you like to convert another integer (Y/N)? n
 
 
 
