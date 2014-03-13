@@ -86,12 +86,10 @@ Please enter an integer: 123
 
 Would you like to convert another integer (Y/N)? y
 
-
 Please enter an integer: 401
 --> CDI
 
 Would you like to convert another integer (Y/N)? y
-
 
 Please enter an integer: 1299
 --> MCCXCIX
