@@ -80,22 +80,24 @@ paper.  See if you can experiment your way into something that looks promising.
 
 Sample run:
 
-> Please enter an integer: 123
-> --> CXXIII
-> 
-> Would you like to convert another integer (Y/N)? y
-> 
-> 
-> Please enter an integer: 401
-> --> CDI
-> 
-> Would you like to convert another integer (Y/N)? y
-> 
-> 
-> Please enter an integer: 1299
-> --> MCCXCIX
-> 
-> Would you like to convert another integer (Y/N)? n
+```
+Please enter an integer: 123
+--> CXXIII
+
+Would you like to convert another integer (Y/N)? y
+
+
+Please enter an integer: 401
+--> CDI
+
+Would you like to convert another integer (Y/N)? y
+
+
+Please enter an integer: 1299
+--> MCCXCIX
+
+Would you like to convert another integer (Y/N)? n
+```
 
 
 
