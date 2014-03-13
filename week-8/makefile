@@ -1,12 +1,12 @@
 ##
 # Ben Blazak
 # week 8
-# makefile for LaTeX (*.tex) documents
+# makefile to generate PDF files
 #
 
 CPP := $(wildcard *.cpp)
 
-PDF := $(CPP:%.cpp=%.pdf)
+PDF := $(CPP:%.cpp=%.code.pdf)
 PDF += $(CPP:%.cpp=%.output.pdf)
 
 # -----------------------------------------------------------------------------
@@ -14,16 +14,23 @@ PDF += $(CPP:%.cpp=%.output.pdf)
 .PHONY: all clean cleanall
 
 all: $(PDF)
+	pdfjoin -o all-code.pdf *.code.pdf
+	pdfjoin -o all-output.pdf *.output.pdf
+	make clean
 
 clean:
 	-rm $(PDF)
 
 cleanall: clean
+	-rm all-code.pdf all-output.pdf
 
 # -----------------------------------------------------------------------------
 
 %.output.txt: %.cpp
 	clang++ $<; ./a.out > $@; rm a.out
+
+%.code.cpp: %.cpp
+	cp $< $@
 
 # -----------------------------------------------------------------------------
 
