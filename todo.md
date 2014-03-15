@@ -60,3 +60,35 @@ A place for thoughts and possible revisions.
   future I should probably put anything I wish everyone to see (like "Sample
   runs") at the beginning.
 
+## Week 7
+- I think spending a whole lecture and lab going over booleans was really good.
+  It was an easier lab.  The faster students finished *really* fast, and a few
+  took the whole time.  Myprogramming lab seems to be quite good for this
+  topic.  Also, the truth table worksheet was nice, because it helped to make
+  apparent some of the misconceptions people had (even some of the faster
+  students) :) .
+
+## Week 8
+- This one went both better and worse than I had imagined.  A few people came
+  up with a solution *very* quickly.  That was pretty cool.  On the other hand,
+  a few people didn't quite understand within the lab period.  Mostly because
+  they didn't design (in groups) first, like the prompt said to, I imagine..
+  Mostly because that's probably a bit awkward, and I failed to properly
+  encourage it.
+- I probably should have stopped around 30-45 minutes in, and called a group
+  design session in the front, so I could help everyone who hadn't gotten it by
+  themselves yet.  Alternately, we could have required them to turn in a
+  "structure chart" (i.e. a design picture), or something like that.
+- It was cool to see the different ideas people came up with :) .  I remember
+  3, besides mine, distinctly (and actually, the solution I had come up with
+  was in the minority).  The majority of people I saw implemented it with
+  multiple while loops -- one for each case (so, one for pulling out all the
+  "M"s, then all the "CM"s, etc.).
+- There were quite a few students that looked up an algorithm online.
+  Perfectly acceptable, I think, according to what we've been allowing (and
+  sometimes advocating, about looking stuff up) in the past.  But still, half
+  the point was algorithm design, and so it would have been better if everyone
+  had done it on their own.  Probably, finding some way to get them all to
+  design it on paper (or on the whiteboard! preferably) would help a lot with
+  that.
+
