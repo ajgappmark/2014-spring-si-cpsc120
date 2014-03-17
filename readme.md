@@ -41,6 +41,7 @@ For Professor Smith's Thursday (lecture) Thursday (lab) section.
     - Loops (and program design)
 
 - Week  9: 2014-03-20
+    - Loop comparison (and loop reverse engineering)
 
 - Week 10: 2014-03-27
 
