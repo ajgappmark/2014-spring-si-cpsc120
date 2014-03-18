@@ -41,9 +41,10 @@ For Professor Smith's Thursday (lecture) Thursday (lab) section.
     - Loops (and program design)
 
 - Week  9: 2014-03-20
-    - Loop comparison (and loop reverse engineering)
+    - Loop Comparison (and loop reverse engineering)
 
 - Week 10: 2014-03-27
+    - Post-Midterm Review
 
 - Week 11: 2014-04-03
     - SPRING RECESS: No Classes, Campus Open
