@@ -92,3 +92,32 @@ A place for thoughts and possible revisions.
   design it on paper (or on the whiteboard! preferably) would help a lot with
   that.
 
+## Week 9
+- Took a lot longer than I thought it would, but not too long, and I think it
+  went really well :)
+- A lot of people misinterpreted the assignment at first...  Many tried to use
+  a loop around a cout statement that printed the diamond literally.  Quite a
+  few also thought that they were supposed to use a loop to print the diamond
+  three times *for each type of loop* (separating the different types of loops
+  into different files).
+- Everyone was really shy about coming to the board, lol.  But when I kept
+  prodding, eventually a small group came up, and we designed it, and it went
+  really well.  After that, I erased our work, on purpose -- and within a few
+  minutes most of the rest of the class came up, and we went through the
+  process again (except that many of them were more shy than the first group,
+  understandably).
+- The ideas behind this assignment -- that you can make one variable be
+  essentially the reverse of another (decrementing as the other increments, for
+  example), and that you can shift the point at which a variable is zero,
+  within loops -- seemed new for almost the entire class.  But that was mostly
+  intentional :) -- they weren't intended to get it on their own, only to
+  participate in the design process, and to see how much easier it is to
+  code once you have your main ideas figured out.
+- Once we had designed the loops, almost none of them had problems deciding
+  where to `cout << " ";` or `cout << "* ";`, etc.
+- Also, there were only a few people that I saw having minor problems
+  converting between the different types of loops -- and I'm pretty sure
+  everyone would have gotten that eventually, in groups, without undue
+  difficulty.  I think mostly, it was just them being unfamiliar with the
+  syntax, since it's still a bit new.
+
