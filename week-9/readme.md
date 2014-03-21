@@ -29,9 +29,9 @@ three times
       *
 ```
 with at most one extra leading and trailing space (if you need them).
-- The first time, use *only* for loops
-- The second time, use *only* while loops
-- The third time, use *only* do-while loops
+- For the first time, use exactly 3 for loops (in some configuration)
+- For the second time, use exactly 3 while loops (in some configuration)
+- For the third time, use exactly 3 do-while loops (in some configuration)
 
 The point is to compare the different types of loops, and to solve the problem
 together before writing the code :)
