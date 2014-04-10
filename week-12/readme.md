@@ -167,12 +167,12 @@ location, which has an address.  When a variable is referenced (as in the cout
 statement in the picture below), the value of the variable is looked up at the
 corresponding address in memory, and then used in place of the variable.
 
-![](images/memory-1.pdf)
+![](images/memory-1.svg)
 
 Note that the variables don't have to be allocated in the order in which they
 are declared (the compiler can do what it wants):
 
-![](images/memory-2.pdf)
+![](images/memory-2.svg)
 
 For completeness (even though you don't need to worry about it right now):
 - The memory addresses your program uses will (on any common system) never
@@ -198,7 +198,7 @@ make things a bit cleaner :)
 You declare an array (possibly initializing it at the same time) in one of
 three ways:
 
-![](images/memory-3.pdf)
+![](images/memory-3.svg)
 
 Notice:
 - All the elements of each array are right next to each other in memory.
@@ -212,7 +212,7 @@ Note that, just as with variables, each array does not have to be allocated in
 memory in the order in which it was declared (the compiler can do what it
 wants); but all elements in each array do have to be right next to each other:
 
-![](images/memory-4.pdf)
+![](images/memory-4.svg)
 
 Finally, even though you won't formally cover it until CS 121, I think it's
 important to have a general idea of how arrays relate to pointers.
