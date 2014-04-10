@@ -34,7 +34,7 @@ you want, please **start up the lovely Terminal**.
 - Pressing the up arrow will cycle through commands you have previously entered
   (and save you typing).
 
-Look back at the [week-3 instructions](../week-3/readme.md) if you'd like more
+Look back at the [week-3 instructions](../week-03/readme.md) if you'd like more
 detail.  Here are the commands, for your convenience:
 
 ```bash

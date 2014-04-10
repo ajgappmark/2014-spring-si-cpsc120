@@ -67,7 +67,7 @@ still open!  And I will find extra markers if need be.  Suggestions:
 - Do we need a loop?  If so, which kind do you think we need?  If not, can we
   use one anyway to make our code cleaner and less redundant?
 - Do we need a function?  You can take a look at 
-  [the examples from week 6](../week-6#preview-user-defined-functions)
+  [the examples from week 6](../week-06#preview-user-defined-functions)
   if you like.
     - If you're not feeling good about using functions today, I would recommend
       you not to.  If you do feel comfortable though, it might make your code a

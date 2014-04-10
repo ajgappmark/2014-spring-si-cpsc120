@@ -53,7 +53,7 @@ if you're programming in Windows you probably want Visual Studio, and if you're
 writing an app for your iPhone you probably want Xcode) but in general, now
 that you've been exposed to two or three, it's up to you which you prefer :) .
 - If you need instructions for using the terminal, please see [week-3's
-  lab](../week-3/readme.md).
+  lab](../week-03/readme.md).
 - If you need instructions for using Visual Studio, please see the lovely Word
   document Josh made up.  (If you're in the Tuesday section, you should have
   this already.  If not, please get it from someone who got it from someone who

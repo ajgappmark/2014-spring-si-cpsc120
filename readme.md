@@ -50,6 +50,8 @@ For Professor Smith's Thursday (lecture) Thursday (lab) section.
     - SPRING RECESS: No Classes, Campus Open
 
 - Week 12: 2014-04-10
+    - Loop Review
+    - Introduction to Arrays
 
 - Week 13: 2014-04-17
 
