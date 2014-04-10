@@ -42,8 +42,8 @@ int main() {
 }
 ```
 
-Note that both -1- and -2- are equivalent.  If there is only one statement in
-the body of an if or else, the braces are not optional.
+Note that -1- and -2- are equivalent.  If there is only one statement in the
+body of an if or else, the braces are not optional.
 
 Now consider this:
 ```C++
