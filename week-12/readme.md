@@ -7,6 +7,7 @@
 - Exercise
     - Part 1: Operations on a List of Integers
     - Part 2: Palindromes
+- Continuing Challenges
 
 
 
