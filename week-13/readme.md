@@ -91,11 +91,11 @@ int main() {
 
 Now use this program to test how long your selection sort algorithm takes for
 arrays of various sizes :) .  You should notice that doubling the size of the
-array roughly squares the time that selection sort takes to complete.  This is
-why selection sort is called an O(n^2) algorithm: because the time it takes to
-run is proportional to the square of the number of elements in the list.  There
-are faster algorithms for sorting, but they're a bit more complicated.  If
-you're a CS major, you'll get to them soon :) .
+array roughly quadruples the time that selection sort takes to complete.  This
+is why selection sort is called an O(n^2) algorithm: because the time it takes
+to run is proportional to the square of the number of elements in the list.
+There are faster algorithms for sorting, but they're a bit more complicated.
+If you're a CS major, you'll get to them soon :) .
 
 Paste a copy of the terminal output in a comment at the bottom of your program
 before you turn it in.
