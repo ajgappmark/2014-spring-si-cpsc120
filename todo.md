@@ -121,3 +121,8 @@ A place for thoughts and possible revisions.
   difficulty.  I think mostly, it was just them being unfamiliar with the
   syntax, since it's still a bit new.
 
+## Week 10
+- Took most everyone a little while, but that is to be expected.
+- Error in the "memory-4" picture: `int c[3];` should reserve 3 slots in
+  memory.
+

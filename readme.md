@@ -54,6 +54,7 @@ For Professor Smith's Thursday (lecture) Thursday (lab) section.
     - Introduction to Arrays
 
 - Week 13: 2014-04-17
+    - Selection Sort
 
 - Week 14: 2014-04-24
 
