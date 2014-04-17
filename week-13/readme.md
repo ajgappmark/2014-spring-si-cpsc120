@@ -44,8 +44,8 @@ Hints:
 - You will probably want to be using a nested for loop when writing your
   selection sort.
 - If you haven't seen it before, you may also want to look up how to swap
-  variables (this part's okay to look online for; but maybe you could *try* to
-  figure it out, just to make me extra happy :) )
+  two elements in an array (this part's okay to look online for; but maybe you
+  could *try* to figure it out, just to make me extra happy :) )
 
 
 ### Part 2: Measuring Performance
