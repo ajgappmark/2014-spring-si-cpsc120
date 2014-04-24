@@ -57,6 +57,7 @@ For Professor Smith's Thursday (lecture) Thursday (lab) section.
     - Selection Sort
 
 - Week 14: 2014-04-24
+    - In-lab Project: Maze (week 1 of 3)
 
 - Week 15: 2014-05-01
 
