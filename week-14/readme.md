@@ -76,6 +76,7 @@ components:
 - A multidimensional array containing the board.
     - There are many ways to declare this.  Since the best way is probably not
       obvious at this point, here's a small example:
+
       ```C++
       const int rows = 4;
       const int columns = 9;
@@ -86,6 +87,7 @@ components:
       "*** i ***",
       };
       ```
+
     - I recommend using `'i'` for the user's character, `'='` for the finish,
       and `'*'` for the walls.
     - If you're feeling adventurous, you might consider adding other characters
