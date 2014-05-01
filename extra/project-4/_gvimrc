@@ -1,0 +1,131 @@
+" -----------------------------------------------------------------------------
+" macros for math 430 (number theory)
+" -----------------------------------------------------------------------------
+
+inoremap BA \item \answer{%<enter>}<esc>O
+inoremap BP \item \proof{%<enter>}<esc>O
+inoremap BS \item \solution{%<enter>}<esc>O
+
+inoremap LL \begin{lstlisting}<enter>\end{lstlisting}<esc>O<esc>i
+inoremap LI \lstinline{
+inoremap VV \begin{verbatim}<enter>\end{verbatim}<esc>O<esc>i
+inoremap VI \verb!
+
+" -----------------------------------------------------------------------------
+
+inoremap CC \mathbb{C}
+inoremap RR \mathbb{R}
+inoremap ZZ \mathbb{Z}
+
+" -----------------------------------------------------------------------------
+
+inoremap GQ <esc>Vgq
+
+inoremap @@ ^2
+inoremap ## ^3
+inoremap NN ^n
+inoremap PE ^\perp
+
+inoremap 0bb \text{}_{2}<esc>F_hi
+inoremap 0oo \text{}_{8}<esc>F_hi
+inoremap 0dd \text{}_{10}<esc>F_hi
+inoremap 0xx \text{}_{16}<esc>F_hi
+inoremap 0b$ $\text{}_{2}$<esc>F_hi
+inoremap 0o$ $\text{}_{8}$<esc>F_hi
+inoremap 0d$ $\text{}_{10}$<esc>F_hi
+inoremap 0x$ $\text{}_{16}$<esc>F_hi
+
+inoremap <=  \leq
+inoremap >=  \geq
+inoremap <>  \neq
+inoremap u<  \subset
+inoremap u<= \subseteq
+inoremap u>  \supset
+inoremap u>= \supseteq
+
+inoremap //   \frac{
+
+inoremap $$  $<esc>F a$<esc>f$a
+inoremap $$$ $<esc>hi$<esc>2la
+
+inoremap TB \textbf{
+inoremap TI \textit{
+inoremap TE \text{
+
+inoremap MB \mathbb{
+inoremap MC \mathcal{
+
+inoremap OL \overline{
+
+inoremap AA \begin{align*}<enter>\end{align*}<esc>O
+inoremap EE \begin{enumerate}<enter>\end{enumerate}<esc>O
+inoremap II \begin{itemize}<enter>\end{itemize}<esc>O
+inoremap DM \[<enter>\]<esc>O
+inoremap NO \note{<enter>}<esc>O
+
+inoremap AM  \[<enter>\begin{array}{}<enter>\end{array}<enter>\]<esc>kk$i
+inoremap BM  \bordermatrix{<enter>}<esc>O
+inoremap BMM \[<enter>\bordermatrix{<enter>}<enter>\]<esc>kO
+inoremap PM  \begin{pmatrix}<enter>\end{pmatrix}<esc>O
+inoremap PMM \[<enter>\begin{pmatrix}<enter>\end{pmatrix}<enter>\]<esc>kO
+inoremap TM  \begin{tabular}{}<enter>\end{tabular}<esc>k$i
+
+inoremap ,.  ,<esc>2F,vF,ly2f,p3F,s<esc>f,s_<esc>2f,.F,s,\ldots,<esc>f,s
+inoremap ,.. ,<esc>2F,vF,ly2f,p3F,s{<esc>f,s}_{<esc>2f,.F,s},\ldots,{<esc>f,s}
+
+inoremap Aa α
+inoremap Bb β
+inoremap Gg γ
+inoremap Dd δ
+inoremap Ee ε
+inoremap Zz ζ
+inoremap Hh η
+inoremap Uu θ
+inoremap Ii ι
+inoremap Kk κ
+inoremap Ll λ
+inoremap Mm μ
+inoremap Nn ν
+inoremap Jj ξ
+inoremap Oo ο
+inoremap Pp π
+inoremap Rr ρ
+inoremap Ww ς
+inoremap Ss σ
+inoremap Tt τ
+inoremap Yy υ
+inoremap Ff φ
+inoremap Xx χ
+inoremap Cc ψ
+inoremap Vv ω
+
+iabbrev dc  \cdot
+iabbrev dcs \cdots
+iabbrev dds \ddots
+iabbrev dl  \ldot
+iabbrev dls \ldots
+iabbrev dvs \vdots
+iabbrev es  \enskip
+iabbrev fa  \forall
+iabbrev mt  \mapsto
+iabbrev op  \oplus
+iabbrev qu  \quad
+iabbrev ra  \rightarrow
+iabbrev Ra  \Rightarrow
+
+iabbrev Sup   Suppose
+iabbrev cpx   complex
+iabbrev fd    finite-dimensional
+iabbrev iff   if and only if
+iabbrev inf   infinite
+iabbrev neg   negative
+iabbrev nneg  non negative
+iabbrev ope   operator
+iabbrev opes  operators
+iabbrev org   orthogonal
+iabbrev poly  polynomial
+iabbrev pos   positive
+iabbrev st    such that
+iabbrev sup   suppose
+iabbrev wrt   with respect to
+

@@ -126,3 +126,49 @@ A place for thoughts and possible revisions.
 - Error in the "memory-4" picture: `int c[3];` should reserve 3 slots in
   memory.
 
+## Week 11
+- (Spring Recess)
+
+## Week 12
+- I'm writing this super late... but IIRC, this lab was about average.  I don't
+  think everyone got to the "Palindromes" part.
+- There was still some confusion about using loops.  I feel like, while
+  projects and examples and such are better than drilling with MyProgrammingLab
+  in general, there needs to be a lot more programming work in order for this
+  (more traditional?) method to produce the same level of proficiency in basic
+  stuff...
+
+## Week 13
+- Again, I should have written this a while ago, as I don't remember the lab
+  very well.
+- We went over the algorithm 3 different ways in class: once on the board, once
+  on the computer, and once with Josh sorting five people in the front of the
+  class by height :) (which was fun).  When we got to the lab, students still
+  had trouble knowing exactly what was going on.  But I think, once they
+  thought about it for a while, most of them got it.  Josh said that his
+  section didn't really have any problems, so my thought is that introducing
+  sort, and then trying to implement even a simple sorting algorithm just two
+  hours later, is a bit too quick.
+
+## Week 14
+- Maze project!  I think we had about 3 people in the Thursday lab that had
+  theirs finished (less housekeeping details) by the end of the first lab
+  (though, those three students are typically pretty fast, and they stayed the
+  *whole* 3 hours and 45 minutes).
+- We took this opportunity to introduce GitHub (at the beginning of lab), which
+  took a while (understandably).  I tried (and so did the professor) to explain
+  what it was good for, but I'm not sure if it quite caught on.  I haven't
+  really thought of a *good* way to explain it yet... it's just one of those
+  things that made sense to me, when I learned about it after a year or two of
+  programming (hey! let's keep track of everything!).  But it's an important
+  concept, so I'm glad we introduced it.
+- I demo'd my solution to this assignment (which was surprisingly simple, yet
+  fun, to me at least).  I could have done a better job presenting it.  I think
+  presenting it was better than not though, to give the students a feel for
+  what they were trying to accomplish.
+- A lot of people were a bit confused about how to start, IIRC, which makes
+  sense.  It might be good, in class, or at the beginning of lab, or something,
+  to go over the control flow concepts in this project, which really are pretty
+  different than anything we've done thus far, even though the C++ features
+  being used are fairly simple (and we went over all of them a while ago).
+

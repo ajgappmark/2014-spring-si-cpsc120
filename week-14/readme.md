@@ -2,7 +2,7 @@
 
 ## Contents
 
-- Project (week 1 of 3)
+- Project (week 1 of 2)
     - Introduction
     - Github
     - Maze: Basics
@@ -10,11 +10,11 @@
 
 
 
-## Project (week 1 of 3)
+## Project (week 1 of 2)
 
 ### Introduction
 
-This project (an interactive maze) will be done in lab over the next 3 weeks.
+This project (an interactive maze) will be done in lab over the next 2 weeks.
 It will cover a few things that we might not be very familiar with yet:
 - pushing code to github
 - functions
