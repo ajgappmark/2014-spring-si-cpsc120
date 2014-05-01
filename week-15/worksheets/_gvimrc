@@ -1,0 +1,6 @@
+inoremap ,i \includegraphics{./images/
+inoremap ,m  \begin{minted}{c++}<return>\end{minted}<esc>O
+inoremap ,mi \inputminted{c++}{./code/
+inoremap ,s  \mysection{
+inoremap ,v  \verb!
+
