@@ -8,7 +8,7 @@
 \def \docClass  {CPSC 120}
 \def \docSchool {~}
 \def \docTerm   {Spring 2014}
-\def \docTitle  {worksheets}
+\def \docTitle  {Worksheets}
 
 
 % -----------------------------------------------------------------------------
@@ -171,6 +171,7 @@
 
 % }}}
 % other -----------------------------------------------------------------------
+% {{{
 
 % - sometimes a "\par", especially at the end of a block, is necessary to
 %   prevent an extra (empty) paragraph from appearing in the output
@@ -179,43 +180,16 @@
      \def \note     #1{{\color{.!50}#1\par}}
 \long\def \longnote #1{{\color{.!50}#1\par}}
 
-\def \mysection #1{%
-  \newpage \thispagestyle{firstpage}
-  \section{#1}
-}
-
-\def \ssFix    {\filbreak\subsection*{Fix the Broken Code}}
-\def \ssTrace  {\filbreak\subsection*{Trace the Working Code}}
 \def \ssScope  {\filbreak\subsection*{Circle the Variables' Scopes}}
 \def \ssMemory {\filbreak\subsection*{Fill in the Memory}}
-
-\def \codeFix #1{%
-  \filbreak
-  \question{
-    \inputminted{c++}{./code/#1.cpp} \vspace{-6ex}
-  } \answer{
-    \inputminted{c++}{./code/#1.answer.cpp} \vspace{-6ex}
-    \inputminted{diff}{./code/#1.answer.cpp.diff} \vspace{-6ex}
-    \inputminted{text}{./code/#1.answer.cpp.output} \vspace{-6ex}
-  }
-}
-
-\def \codeTrace #1{%
-  \filbreak
-  \inputminted{c++}{./code/#1.cpp} \vspace{-6ex}
-  \question{
-  } \answer{
-    \inputminted{text}{./code/#1.cpp.output} \vspace{-6ex}
-  }
-}
+\def \ssFix    {\filbreak\subsection*{Fix the Broken Code}}
+\def \ssTrace  {\filbreak\subsection*{Trace the Working Code}}
 
 \def \codeScope #1{%
   \filbreak
-  \inputminted{c++}{./code/#1.cpp} \vspace{-6ex}
-  \question{
-  } \answer{
-    \inputminted{text}{./code/#1.cpp.output} \vspace{-6ex}
-  }
+  \vspace{1ex}
+  \inputminted[frame=none,fontsize=\large]{c++}{./code/#1.cpp}
+  \newpage
 }
 
 \def \codeMemory #1{%
@@ -227,29 +201,47 @@
   \newpage
 }
 
+\def \codeFix #1{%
+  \filbreak
+  \question{
+    \inputminted{c++}{./code/#1.cpp}
+  } \answer{
+    \inputminted{c++}{./code/#1.answer.cpp}
+    \vspace{-6ex}
+    \inputminted{diff}{./code/#1.answer.cpp.diff}
+    \vspace{-6ex}
+    \inputminted{text}{./code/#1.answer.cpp.output}
+  }
+  \vspace{-5ex}
+}
 
+\def \codeTrace #1{%
+  \filbreak
+  \inputminted{c++}{./code/#1.cpp}
+  \question{
+  } \answer{
+    \vspace{-6ex}
+    \inputminted{text}{./code/#1.cpp.output}
+  }
+  \vspace{-5ex}
+}
+
+
+% }}}
 % -----------------------------------------------------------------------------
 % document
 % -----------------------------------------------------------------------------
 
 \begin{document}
+\thispagestyle{firstpage}
 
-
-\newpage \thispagestyle{firstpage}
+\newpage
 \section*{Instructions}
 For a each topic (if applicable) there are 4 sections:
 
-\ssFix
-Modify the code in the cleanest (and preferably shortest) way possible, so that
-it will compile and run without errors or warnings.
-
-\ssTrace
-Trace through the execution of the code, keeping track of the value of each
-variable at each point in time, and the final output that the program produces.
-
 \ssScope
-Circle the scope of the given variable -- i.e., circle the part of the code in
-which the variable ``exists''.  A good test, if you're not sure, is: if you
+Circle the scope of the given variables -- i.e., circle the part of the code in
+which each variable ``exists''.  A good test, if you're not sure, is: if you
 inserted a statement to \verb!cout! the variable at a given point in the code,
 would any errors be produced?
 
@@ -258,8 +250,24 @@ Fill in (or draw) a picture representing the computer memory, showing how the
 variables might be allocated, and whether they have an assigned value, or are
 uninitialized (use \verb!?! for ``uninitialized'').
 
+\ssFix
+Modify the code in the cleanest (and shortest) way possible, so that it will
+compile and run without errors or warnings.
 
-\mysection{Variables and Assignment}
+\ssTrace
+Trace through the execution of the code, keeping track of the value of each
+variable at each point in time, and the final output that the program produces.
+
+
+\newpage
+\section{Variables and Assignment}
+
+\ssScope
+\codeScope{1-scope-1}
+\newpage
+
+\ssMemory
+\codeMemory{1-memory-1}
 
 \ssFix
 \codeFix{1-fix-1}
@@ -269,18 +277,13 @@ uninitialized (use \verb!?! for ``uninitialized'').
 \ssTrace
 \codeTrace{1-trace-1}
 \codeTrace{1-trace-2}
+\codeTrace{1-trace-3}
+\codeTrace{1-trace-4}
 \newpage
 
-\ssScope
-\codeScope{1-scope-1}
-\codeScope{1-scope-2}
+
 \newpage
-
-\ssMemory
-\codeMemory{1-memory-1}
-
-
-\mysection{Data Types and Expressions}
+\section{Data Types and Expressions}
 % TODO
 
 \ssFix
@@ -289,7 +292,8 @@ uninitialized (use \verb!?! for ``uninitialized'').
 \ssMemory
 
 
-\mysection{If and If-Else}
+\newpage
+\section{If and If-Else}
 % TODO
 % - *all* the different forms they can take
 
@@ -299,7 +303,8 @@ uninitialized (use \verb!?! for ``uninitialized'').
 \ssMemory
 
 
-\mysection{Boolean Expressions}
+\newpage
+\section{Boolean Expressions}
 % TODO:
 % - evaluating by hand
 
@@ -309,7 +314,8 @@ uninitialized (use \verb!?! for ``uninitialized'').
 \ssMemory
 
 
-\mysection{Predefined Functions}
+\newpage
+\section{Predefined Functions}
 % TODO
 % - header files
 % - usage
@@ -322,7 +328,8 @@ uninitialized (use \verb!?! for ``uninitialized'').
 \ssMemory
 
 
-\mysection{Loops}
+\newpage
+\section{Loops}
 % TODO: for, while, do-while
 % - tracing
 % - correspondence between the different types
@@ -333,7 +340,8 @@ uninitialized (use \verb!?! for ``uninitialized'').
 \ssMemory
 
 
-\mysection{Arrays}
+\newpage
+\section{Arrays}
 % TODO
 % - declaring
 %   - uninitialized
@@ -349,7 +357,8 @@ uninitialized (use \verb!?! for ``uninitialized'').
 \ssMemory
 
 
-\mysection{Selection Sort}
+\newpage
+\section{Selection Sort}
 % TODO
 
 \ssFix

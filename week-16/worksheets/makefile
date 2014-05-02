@@ -3,12 +3,10 @@ PDF := $(TEX:%.tex=%.pdf)
 
 CPP_FIX   := $(wildcard ./code/*fix*.answer.cpp)
 CPP_TRACE := $(wildcard ./code/*trace*.cpp)
-CPP_SCOPE := $(wildcard ./code/*scope*.cpp)
 
 DIFF   := $(CPP_FIX:%.cpp=%.cpp.diff)
 OUTPUT := $(CPP_FIX:%.cpp=%.cpp.output)
 OUTPUT += $(CPP_TRACE:%.cpp=%.cpp.output)
-OUTPUT += $(CPP_SCOPE:%.cpp=%.cpp.output)
 
 ANSWER_PAGES := $(wildcard ./answer-pages/*.pdf)
 
@@ -41,7 +39,7 @@ cleanall: clean
 
 # -----------------------------------------------------------------------------
 
-worksheets--answers.pdf: worksheets--answers.tex
+worksheets--answers.pdf: worksheets--answers.tex ./answer-pages/
 	latexmk --shell-escape -lualatex -bibtex -pdf -g $<
 	for n in $(ANSWER_PAGES:./answer-pages/%.pdf=%); do \
 		mv $@ temp--$@; \
