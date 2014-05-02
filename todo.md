@@ -172,3 +172,16 @@ A place for thoughts and possible revisions.
   different than anything we've done thus far, even though the C++ features
   being used are fairly simple (and we went over all of them a while ago).
 
+## Week 15
+- Attendance is down (in both the lab and the lecture) like crazy.  I think
+  people are mostly over it...
+- There were quite a few of those who showed up who hadn't really started their
+  maze project till this week... lol
+- Some people were still having issues with nested for loops for accessing each
+  element of the array in tern, etc.  I think we probably didn't give them
+  enough to practice with...
+- Besides that though, it was just a really calm, almost last lab (since next
+  week is optional).
+- Some of the typically faster students came up with some fun extensions :) it
+  was *really* cool to see :)
+

@@ -68,6 +68,8 @@
 
 \usemintedstyle{solarizedlight}
 
+\fvset{samepage=true,frame=single,rulecolor=\color{.!30},framesep=2mm}
+
 % header and footer -----------------------------------------------------------
 
 \pagestyle{fancy}
@@ -75,8 +77,8 @@
 \lhead{{\answer{\color{.}}\docClass}}
 \rhead{{\answer{\color{.}}\docTitle}}
 \cfoot{{\answer{\color{.}}\thepage}}
-\renewcommand{\headrule}{{\answer{\color{.}}\hrule height 0.4pt}}
-\renewcommand{\footrule}{{\answer{\color{.}}\hrule height 0.4pt}}
+\renewcommand{\headrule}{{\answer{\color{red}}\hrule height 0.4pt}}
+\renewcommand{\footrule}{{\answer{\color{red}}\hrule height 0.4pt}}
 
 \fancypagestyle{firstpage}{
   \fancyhead[L]{{\answer{\color{red}}\docAuthor}
@@ -177,40 +179,56 @@
      \def \note     #1{{\color{.!50}#1\par}}
 \long\def \longnote #1{{\color{.!50}#1\par}}
 
-\def \ssFix    {\filbreak\subsection*{fix teh brokd codez}}
-\def \ssTrace  {\filbreak\subsection*{trace teh werkin codez}}
-\def \ssScope  {\filbreak\subsection*{circle teh variablez scope}}
-\def \ssMemory {\filbreak\subsection*{fill in da mems}\vspace{2ex}\memory\vspace{3ex}}
-
-\def \lines #1{{\color{.!50}\hrule}#1{\color{.!50}\hrule}}
-
-\def \memory {\lines{\includegraphics{./images/memory-0}}}
-
 \def \mysection #1{%
   \newpage \thispagestyle{firstpage}
   \section{#1}
 }
 
+\def \ssFix    {\filbreak\subsection*{fix teh brokd codez}}
+\def \ssTrace  {\filbreak\subsection*{trace teh werkin codez}}
+\def \ssScope  {\filbreak\subsection*{circle teh variablez scope}}
+\def \ssMemory {\filbreak\subsection*{fill in da mems}}
+% \def \ssFix    {\filbreak\subsection*{Fix the Broken Code}}
+% \def \ssTrace  {\filbreak\subsection*{Trace the Working Code}}
+% \def \ssScope  {\filbreak\subsection*{Circle the Variables' Scopes}}
+% \def \ssMemory {\filbreak\subsection*{Fill in the Memory}}
+
 \def \codeFix #1{%
-  \vspace{2ex}
+  \filbreak
   \question{
-    \lines{\inputminted{c++}{./code/#1.cpp}}
+    \inputminted{c++}{./code/#1.cpp} \vspace{-6ex}
   } \answer{
-    \lines{\inputminted{c++}{./code/#1.answer.cpp}}
-    \lines{\inputminted{diff}{./code/#1.answer.cpp.diff}}
-    \lines{\inputminted{text}{./code/#1.answer.cpp.output}}
+    \inputminted{c++}{./code/#1.answer.cpp} \vspace{-6ex}
+    \inputminted{diff}{./code/#1.answer.cpp.diff} \vspace{-6ex}
+    \inputminted{text}{./code/#1.answer.cpp.output} \vspace{-6ex}
   }
-  \vspace{2ex}
 }
 
 \def \codeTrace #1{%
-  \vspace{2ex}
-  \lines{\inputminted{c++}{./code/#1.cpp}}
+  \filbreak
+  \inputminted{c++}{./code/#1.cpp} \vspace{-6ex}
   \question{
   } \answer{
-    \lines{\inputminted{text}{./code/#1.cpp.output}}
+    \inputminted{text}{./code/#1.cpp.output} \vspace{-6ex}
   }
-  \vspace{3ex}
+}
+
+\def \codeScope #1{%
+  \filbreak
+  \inputminted{c++}{./code/#1.cpp} \vspace{-6ex}
+  \question{
+  } \answer{
+    \inputminted{text}{./code/#1.cpp.output} \vspace{-6ex}
+  }
+}
+
+\def \codeMemory #1{%
+  \filbreak
+  \vspace{2ex}
+  \includegraphics{./images/memory-0}
+  \vspace{-2ex}
+  \inputminted[frame=none,fontsize=\large]{c++}{./code/#1.cpp}
+  \newpage
 }
 
 
@@ -248,18 +266,22 @@ uninitialized (use \verb!?! for ``uninitialized'').
 \mysection{Variables and Assignment}
 
 \ssFix
-\codeFix{1-fix-1} \filbreak\vspace{-4ex}
+\codeFix{1-fix-1}
 \codeFix{1-fix-2}
+\newpage
 
 \ssTrace
 \codeTrace{1-trace-1}
-% TODO: another trace
+\codeTrace{1-trace-2}
+\newpage
 
 \ssScope
-% TODO
+\codeScope{1-scope-1}
+\codeScope{1-scope-2}
+\newpage
 
 \ssMemory
-% TODO
+\codeMemory{1-memory-1}
 
 
 \mysection{Data Types and Expressions}

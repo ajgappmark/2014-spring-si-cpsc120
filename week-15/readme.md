@@ -2,7 +2,8 @@
 
 ## Project (week 2 of 2)
 
-**This project has been shortened to two weeks only, because of how the labs are scheduled.**
+**This project has been shortened to two weeks only, because of how the labs
+are scheduled.**
 
 Please see the (very slightly) revised [prompt from last week](../week-14).
 
