@@ -1,3 +1,11 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+
 *.pyg
 *.pytxcode
+
+code/*.cpp.diff
+code/*.cpp.output
 
