@@ -9,7 +9,7 @@ int main() {
     double d =  7;
     string s = "hello world!";
 
-    int u = 42;  // otherwise, we're using an uninitialized variable below
+    int u = 42;  // otherwise we're using an uninitialized variable below
 
     cout << i << " " << c << " " << b << " "
          << d << " " << s << " " << u << endl;

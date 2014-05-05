@@ -177,13 +177,28 @@
 %   prevent an extra (empty) paragraph from appearing in the output
 % - `\color{.!50}` means 50 percent of the current color
 
+\newlength{\currentparskip}
+
      \def \note     #1{{\color{.!50}#1\par}}
 \long\def \longnote #1{{\color{.!50}#1\par}}
 
-\def \ssScope  {\filbreak\subsection*{Circle the Variables' Scopes}}
-\def \ssMemory {\filbreak\subsection*{Fill in the Memory}}
-\def \ssFix    {\filbreak\subsection*{Fix the Broken Code}}
-\def \ssTrace  {\filbreak\subsection*{Trace the Working Code}}
+\def \ssQuestions {\filbreak\subsection*{Short Answer}}
+\def \ssScope     {\filbreak\subsection*{Circle the Variables' Scopes}}
+\def \ssMemory    {\filbreak\subsection*{Fill in the Memory}}
+\def \ssFix       {\filbreak\subsection*{Fix the Broken Code}}
+\def \ssTrace     {\filbreak\subsection*{Trace the Working Code}}
+
+\long\def \textQuestion #1#2{%
+  \filbreak
+  \setlength{\currentparskip}{\parskip}
+  \begin{minipage}[t][3.5in][t]{\textwidth}
+    \setlength{\parskip}{\currentparskip}
+    \subsubsection*{Question}
+    #1
+    \subsubsection*{Answer}
+    \answer{#2}
+  \end{minipage}
+}
 
 \def \codeScope #1{%
   \filbreak
@@ -237,7 +252,10 @@
 
 \newpage
 \section*{Instructions}
-For a each topic (if applicable) there are 4 sections:
+For a each topic (if applicable) there are 5 sections:
+
+\ssQuestions
+Answer each question as well as you can.
 
 \ssScope
 Circle the scope of the given variables -- i.e., circle the part of the code in
@@ -261,6 +279,44 @@ variable at each point in time, and the final output that the program produces.
 
 \newpage
 \section{Variables and Assignment}
+
+\ssQuestions
+\textQuestion{
+  Describe undeclared variables, uninitialized variables, and initialized
+  variables.
+}{
+  Undeclared variables don't really exist.  This term usually shows up in error
+  messages when you try to use a variable that you haven't declared yet (either
+  because you forgot, or you misspelled or mis-capitalized it, etc.).
+
+  Uninitialized variables are declared, but have not yet been given a value.
+  This means that their value is undefined (i.e., garbage, or whatever was in
+  that location in memory before it was assigned to that variable).  Variables
+  should not be used before being given a value.
+
+  Initialized variables are both declared an initialized.  This means that they
+  have been assigned a location in memory, and that that memory has been set to
+  some desired value.
+}
+\textQuestion{
+  Describe what we mean when we refer to a variable's scope.
+}{
+  A variable's scope is the region in the code where the variable ``exists''.
+  Inside this scope, after the variable is declared, the variable may be used.
+  Outside this scope, or before the variable has been declared, attempting to
+  use the variable will result in a compile time error (in C++).
+
+  In practice, the scope of most variables is determined by the innermost pair
+  of curly braces containing it.
+
+  It is possible for a variable in an inner scope to have the same name as a
+  variable in an outer scope.  If this is the case, the variable in the inner
+  scope is said to ``mask'' the variable from the outer scope, beginning from
+  the point at which it is declared.  Once execution proceeds outside the inner
+  scope, the variable from the outer scope will be ``visible'' (i.e., usable)
+  again.
+}
+\newpage
 
 \ssScope
 \codeScope{1-scope-1}
@@ -288,8 +344,6 @@ variable at each point in time, and the final output that the program produces.
 
 \ssFix
 \ssTrace
-\ssScope
-\ssMemory
 
 
 \newpage
@@ -297,10 +351,10 @@ variable at each point in time, and the final output that the program produces.
 % TODO
 % - *all* the different forms they can take
 
-\ssFix
-\ssTrace
 \ssScope
 \ssMemory
+\ssFix
+\ssTrace
 
 
 \newpage
@@ -308,10 +362,10 @@ variable at each point in time, and the final output that the program produces.
 % TODO:
 % - evaluating by hand
 
-\ssFix
-\ssTrace
 \ssScope
 \ssMemory
+\ssFix
+\ssTrace
 
 
 \newpage
@@ -322,10 +376,10 @@ variable at each point in time, and the final output that the program produces.
 % - rand()
 % - pow()
 
-\ssFix
-\ssTrace
 \ssScope
 \ssMemory
+\ssFix
+\ssTrace
 
 
 \newpage
@@ -334,10 +388,10 @@ variable at each point in time, and the final output that the program produces.
 % - tracing
 % - correspondence between the different types
 
-\ssFix
-\ssTrace
 \ssScope
 \ssMemory
+\ssFix
+\ssTrace
 
 
 \newpage
@@ -351,20 +405,20 @@ variable at each point in time, and the final output that the program produces.
 % - accessing a single element
 % - swapping elements
 
-\ssFix
-\ssTrace
 \ssScope
 \ssMemory
+\ssFix
+\ssTrace
 
 
 \newpage
 \section{Selection Sort}
 % TODO
 
-\ssFix
-\ssTrace
 \ssScope
 \ssMemory
+\ssFix
+\ssTrace
 
 
 \end{document}
