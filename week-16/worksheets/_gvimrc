@@ -1,6 +1,9 @@
-inoremap ,i \includegraphics{./images/
-inoremap ,m  \begin{minted}{c++}<return>\end{minted}<esc>O
+inoremap ,b \textbf{
+inoremap ,bm  \begin{minted}{c++}<return>\end{minted}<esc>O
+inoremap ,i  \textit{
+inoremap ,ig \includegraphics{./images/
 inoremap ,mi \inputminted{c++}{./code/
 inoremap ,s  \mysection{
+inoremap ,t  \texttt{
 inoremap ,v  \verb!
 

@@ -194,8 +194,11 @@
   \begin{minipage}[t][3.5in][t]{\textwidth}
     \setlength{\parskip}{\currentparskip}
     \subsubsection*{Question}
+    \vspace{-1ex}
     #1
+    \vspace{-2ex}
     \subsubsection*{Answer}
+    \vspace{-1ex}
     \answer{#2}
   \end{minipage}
 }
@@ -251,7 +254,7 @@
 \thispagestyle{firstpage}
 
 \newpage
-\section*{Instructions}
+\section*{Instructions}\gdef\docSection{Instructions}
 For a each topic (if applicable) there are 5 sections:
 
 \ssQuestions
@@ -280,7 +283,7 @@ variable at each point in time, and the final output that the program produces.
 \newpage
 \section{Variables and Assignment}
 
-\ssQuestions
+\ssQuestions %{{{
 \textQuestion{
   Describe undeclared variables, uninitialized variables, and initialized
   variables.
@@ -316,7 +319,7 @@ variable at each point in time, and the final output that the program produces.
   scope, the variable from the outer scope will be ``visible'' (i.e., usable)
   again.
 }
-\newpage
+\newpage %}}}
 
 \ssScope
 \codeScope{1-scope-1}
@@ -324,6 +327,7 @@ variable at each point in time, and the final output that the program produces.
 
 \ssMemory
 \codeMemory{1-memory-1}
+\newpage
 
 \ssFix
 \codeFix{1-fix-1}
@@ -340,58 +344,217 @@ variable at each point in time, and the final output that the program produces.
 
 \newpage
 \section{Data Types and Expressions}
-% TODO
+
+\ssQuestions %{{{
+\textQuestion{
+  What are the 5 main datatypes we studied during this course, and what is each
+  typically used for?
+}{
+  Integer: \texttt{int}.
+  Used for numbers \textit{without} a decimal point, which may be either
+  positive or negative (may represent, on typical modern systems, any number in
+  the range $[-2^{31},2^{31}-1]$).
+
+  Character: \texttt{char}.
+  Used for single characters, such as \texttt{'a'} or \texttt{'C'}.  Note that
+  characters are considered a special type of integer.
+
+  Boolean: \texttt{bool}.
+  Used for \texttt{true}/\texttt{false} values.  The value \texttt{true} is
+  equivalent to \texttt{1}, and \texttt{false} is equivalent to \texttt{0}.
+
+  Double: \texttt{double}.
+  Used for numbers \textit{with} a decimal point.  Cautions: often introduce
+  strange rounding errors; larger in memory, and more complicated than
+  integers.
+
+  String: \texttt{string}.  Used for strings of text, such as \texttt{"hello
+  world!"}.  Can typically also be treated as arrays of single characters.
+  Must \texttt{\#include <string>}.
+}
+\textQuestion{
+  Give examples of what we mean by ``order of operations' -- why does it
+  matter?  What is the order of operations for the following common
+  operators:\\
+  \texttt{!=}, \texttt{==}, \texttt{=}, \texttt{<}, \texttt{>=}, \texttt{+},
+  \texttt{\&\&}, \texttt{||}, \texttt{*}, \texttt{()}, \texttt{>}, \texttt{/},
+  \texttt{<=}, \texttt{-}, \texttt{\%}.
+}{
+  The order of operations is the order in which different operators are
+  performed.  Operators with higher precedence will be performed first, even if
+  they occur later in an expression.
+
+  Consider the expression \texttt{int x = 3 + 5 * 7 + 11}.  Because of the
+  order of operations (i.e., operator precedence) this is the same as
+  \texttt{int x = 3 + (5 * 7) + 11}, and the answer is \texttt{49}.  All
+  operators in C++ have a defined level of precedence.
+
+  Recall the operator precedence chart from some time back:\\
+  \url{http://en.cppreference.com/w/cpp/language/operator_precedence}
+
+  The correct order is:
+  \texttt{()},\quad
+  \texttt{*}, \texttt{/}, \texttt{\%},\quad
+  \texttt{+}, \texttt{-},\quad
+  \texttt{<}, \texttt{<=}, \texttt{>}, \texttt{>=},\quad
+  \texttt{==}, \texttt{!=},\quad
+  \texttt{\&\&},\quad
+  \texttt{||},\quad
+  \texttt{=},\\
+  where operators with less space between them have equal precedence and (for
+  all of these groups of operators) are executed from left to right within
+  their groups.
+}
+\newpage %}}}
 
 \ssFix
+\codeFix{2-fix-1}
+\codeFix{2-fix-2}
+\newpage
+
 \ssTrace
+\codeTrace{2-trace-1}
+\codeTrace{2-trace-2}
+\codeTrace{2-trace-3}
+\newpage
 
 
 \newpage
 \section{If and If-Else}
-% TODO
-% - *all* the different forms they can take
 
-\ssScope
-\ssMemory
 \ssFix
+\codeFix{3-fix-1}
+\codeFix{3-fix-2}
+\codeFix{3-fix-3}
+\newpage
+
 \ssTrace
+\codeTrace{3-trace-1}
+\codeTrace{3-trace-2}
+\codeTrace{3-trace-3}
+\codeTrace{3-trace-4}
+\codeTrace{3-trace-5}
+\newpage
 
 
 \newpage
-\section{Boolean Expressions}
-% TODO:
-% - evaluating by hand
+\section{Functions}
 
-\ssScope
-\ssMemory
+\ssQuestions %{{{
+\textQuestion{
+  What is a function?  What is a predefined function?  Why do we care?
+}{
+  A function is a group of statements that we give (or someone else gives) a
+  name, so that we can call it (execute it) later in the program.
+
+  A predefined function is a function defined in the C++ standard library (or
+  by any other library you're using).
+
+  Functions are useful, among other things, for making code cleaner.  If we
+  have something that needs to be done many times at different points in our
+  code (like printing the board for a maze program\ldots), and we put it in a
+  function, we only need to write it once: instead of copy+pasting the code
+  every time we need to do that, we can now call the function.
+
+  Predefined functions are especially useful, because they are essentially code
+  we don't have to write.  If we need to generate a random number, for
+  instance, we can call \texttt{rand()} -- without needing to know or even look
+  at how it's implemented.
+}
+\textQuestion{
+  What library contains the \texttt{pow()} function?  What are two other
+  functions this library contains?
+}{
+  The \texttt{pow()} function is contained in the \texttt{<cmath>} (in C++; or
+  \texttt{<math.h>} in C) library.
+
+  This library also contains the
+  \texttt{sin()},
+  \texttt{cos()},
+  \texttt{tan()},
+  \texttt{log()},
+  \texttt{sqrt()},
+  \texttt{ceil()},
+  \texttt{floor()}, and
+  \texttt{abs()} functions, among others.
+
+  \url{http://www.cplusplus.com/reference/cmath/}
+}
+\newpage %}}}
+
 \ssFix
-\ssTrace
-
-
+\codeFix{4-fix-1}
+\codeFix{4-fix-2}
+\codeFix{4-fix-3}
 \newpage
-\section{Predefined Functions}
-% TODO
-% - header files
-% - usage
-% - rand()
-% - pow()
-
-\ssScope
-\ssMemory
-\ssFix
-\ssTrace
 
 
 \newpage
 \section{Loops}
-% TODO: for, while, do-while
-% - tracing
-% - correspondence between the different types
+
+\ssQuestions %{{{
+\textQuestion{
+  What are the three types of loops in C++?  Explain what each does, or what
+  you might use it for.
+}{
+  For loop: \texttt{for ([init] ; [condition] ; [iter]) \{ [body] \}}.
+  Executes \texttt{[init]}, checks \texttt{[condition]}, executes
+  \texttt{[body]}, executes \texttt{[iter]}, and then goes back to checking
+  \texttt{[condition]}, exiting when \texttt{[condition]} is \texttt{false}.
+  Useful for everything, but especially for looping through arrays, or for
+  anything else that requires a counter variable.
+
+  While loop: \texttt{while ([condition]) \{ [body] \}}.  Checks
+  \texttt{[condition]}, executes \texttt{[body]}, and then goes back to
+  checking \texttt{[condition]}, exiting when \texttt{[condition]} is
+  \texttt{false}.  Useful for doing things like reading from a file until you
+  have reached the end.
+
+  Do-while loop: \texttt{do \{ [body] \} while( [condition] );}.  Executes
+  \texttt{[body]}, checks \texttt{[condition]}, and then goes back to executing
+  \texttt{[body]}, exiting when it \texttt{[condition]} is found to be false.
+  Good for things like displaying a menu, responding to the user's choice, and
+  then displaying the menu again until the user enters \texttt{'n'} for
+  \texttt{"do you want to continue?"}.
+}
+\textQuestion{
+  Is it ever okay to have an infinite loop?  What usually causes unintentional
+  infinite loops?
+}{
+  Yes!  As long as you do it on purpose, for a good reason.
+
+  Most intentional infinite loops are called ``event loops''.  Long running
+  programs (like your operating system, or (the evil) Microsoft Word) typically
+  have a toplevel infinite loop.  Inside this loop, the program will do things
+  like check to see if the user has entered any new input, update the display,
+  maybe save a backup copy of the file you're working on (in the case of Word)
+  or check to see if there's a WiFi signal nearby (in the case of your OS), and
+  then sleep for a while until it's time to do it again.  We saw a bit of this
+  type of control flow in the maze program.
+
+  Unintentional infinite loops are usually caused by forgetting to update the
+  counter variable (in a for loop), or by writing a condition who's value never
+  changes, because none of the variables used in it are referenced in the body
+  of the loop (in a while or do-while loop).
+}
+\newline %}}}
 
 \ssScope
-\ssMemory
+\codeScope{5-scope-1}
+\codeScope{5-scope-2}
+\codeScope{5-scope-3}
+\newpage
+
 \ssFix
+\codeFix{5-fix-1}
+\codeFix{5-fix-2}
+\newpage
+
 \ssTrace
+\codeTrace{5-trace-1}
+\codeTrace{5-trace-2}
+\codeTrace{5-trace-3}
+\newpage
 
 
 \newpage
@@ -405,20 +568,49 @@ variable at each point in time, and the final output that the program produces.
 % - accessing a single element
 % - swapping elements
 
-\ssScope
 \ssMemory
-\ssFix
-\ssTrace
-
-
+\codeMemory{6-memory-1}
+\codeMemory{6-memory-2}
+\codeMemory{6-memory-3}
+\codeMemory{6-memory-4}
+\codeMemory{6-memory-5}
 \newpage
-\section{Selection Sort}
-% TODO
 
-\ssScope
-\ssMemory
 \ssFix
+\codeFix{6-fix-1}
+\codeFix{6-fix-2}
+\newpage
+
 \ssTrace
+\codeTrace{6-trace-1}
+\codeTrace{6-trace-2}
+\codeTrace{6-trace-3}
+\codeTrace{6-trace-4}
+\newpage
+
+
+% % mostly covered by the other sections i hope; especially "data types and
+% % expressions", and "if and if-else"
+% \newpage
+% \section{Boolean Expressions}
+% % - evaluating by hand
+% 
+% \ssQuestions
+% \ssScope
+% \ssMemory
+% \ssFix
+% \ssTrace
+
+
+% % don't think we'll have time for this one...
+% \newpage
+% \section{Selection Sort}
+% 
+% \ssQuestions
+% \ssScope
+% \ssMemory
+% \ssFix
+% \ssTrace
 
 
 \end{document}

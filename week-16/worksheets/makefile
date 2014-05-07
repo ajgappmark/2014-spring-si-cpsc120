@@ -1,11 +1,15 @@
 TEX := $(filter-out %.part.tex,$(wildcard *.tex))
 PDF := $(TEX:%.tex=%.pdf)
 
-CPP_FIX   := $(wildcard ./code/*fix*.answer.cpp)
-CPP_TRACE := $(wildcard ./code/*trace*.cpp)
+CPP_SCOPE  := $(wildcard ./code/*scope*.cpp)
+CPP_MEMORY := $(wildcard ./code/*memory*.cpp)
+CPP_FIX    := $(wildcard ./code/*fix*.answer.cpp)
+CPP_TRACE  := $(wildcard ./code/*trace*.cpp)
 
 DIFF   := $(CPP_FIX:%.cpp=%.cpp.diff)
-OUTPUT := $(CPP_FIX:%.cpp=%.cpp.output)
+OUTPUT := $(CPP_SCOPE:%.cpp=%.cpp.output)
+OUTPUT += $(CPP_MEMORY:%.cpp=%.cpp.output)
+OUTPUT += $(CPP_FIX:%.cpp=%.cpp.output)
 OUTPUT += $(CPP_TRACE:%.cpp=%.cpp.output)
 
 ANSWER_PAGES := $(wildcard ./answer-pages/*.pdf)
@@ -25,6 +29,8 @@ cleanall: clean
 
 # -----------------------------------------------------------------------------
 
+.INTERMEDIATE: %.exe
+
 %.exe: %.cpp
 	clang++ $< -o $@
 
@@ -39,6 +45,8 @@ cleanall: clean
 
 # -----------------------------------------------------------------------------
 
+.INTERMEDIATE: ./code/6-trace-2.exe
+
 worksheets--answers.pdf: worksheets--answers.tex ./answer-pages/
 	latexmk --shell-escape -lualatex -bibtex -pdf -g $<
 	for n in $(ANSWER_PAGES:./answer-pages/%.pdf=%); do \
@@ -48,6 +56,9 @@ worksheets--answers.pdf: worksheets--answers.tex ./answer-pages/
 	              output $@; \
 		rm temp--$@; \
 	done
+
+./code/6-trace-2.cpp.output: ./code/6-trace-2.exe
+	echo "11 7 1 13 5 9 3" | ./$< > $@
 
 # -----------------------------------------------------------------------------
 
