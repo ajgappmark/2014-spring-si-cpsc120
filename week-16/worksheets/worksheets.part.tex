@@ -68,23 +68,28 @@
 
 \usemintedstyle{solarizedlight}
 
-\fvset{samepage=true,frame=single,rulecolor=\color{.!30},framesep=2mm}
+% \fvset{samepage=true,frame=single,rulecolor=\color{.!30},framesep=2mm}
+\fvset{samepage=true}
 
 % header and footer -----------------------------------------------------------
 
 \pagestyle{fancy}
 
-\lhead{{\answer{\color{.}}\docClass}}
-\rhead{{\answer{\color{.}}\docTitle}}
-\cfoot{{\answer{\color{.}}\thepage}}
-\renewcommand{\headrule}{{\answer{\color{red}}\hrule height 0.4pt}}
-\renewcommand{\footrule}{{\answer{\color{red}}\hrule height 0.4pt}}
+\lhead{{\color{.}\docClass}}
+\rhead{{\color{.}\docTitle}}
+\lfoot{{\color{.!50}\docSection}}
+\cfoot{{\color{.}\thepage}}
+\rfoot{{\color{.!50}\docSubsection}}
+\renewcommand{\headrule}{{\answer{\color{red}}\question{\color{.}}
+                          \hrule height 0.4pt}}
+\renewcommand{\footrule}{{\answer{\color{red}}\question{\color{.}}
+                          \hrule height 0.4pt}}
 
 \fancypagestyle{firstpage}{
-  \fancyhead[L]{{\answer{\color{red}}\docAuthor}
-                {\answer{\color{.}}\\\docClass}}
-  \fancyhead[C]{{\answer{\color{.}}\docSchool\\}}
-  \fancyhead[R]{{\answer{\color{.}}\docTerm\\\docTitle}}
+  \fancyhead[L]{{\answer{\color{red}}\question{\color{.}}\docAuthor}
+                {\color{.}\\\docClass}}
+  \fancyhead[C]{{\color{.}\docSchool\\}}
+  \fancyhead[R]{{\color{.}\docTerm\\\docTitle}}
 }
 
 
@@ -179,17 +184,22 @@
 
 \newlength{\currentparskip}
 
+\def \docSection {}
+\def \docSubsection {}
+
+\def \mysection #1{\section{#1} \gdef \docSection {#1}}
+\def \mysubsection #1{\subsection*{#1} \gdef \docSubsection {#1}}
+
      \def \note     #1{{\color{.!50}#1\par}}
 \long\def \longnote #1{{\color{.!50}#1\par}}
 
-\def \ssQuestions {\filbreak\subsection*{Short Answer}}
-\def \ssScope     {\filbreak\subsection*{Circle the Variables' Scopes}}
-\def \ssMemory    {\filbreak\subsection*{Fill in the Memory}}
-\def \ssFix       {\filbreak\subsection*{Fix the Broken Code}}
-\def \ssTrace     {\filbreak\subsection*{Trace the Working Code}}
+\def \ssQuestions {\mysubsection{Short Answer}}
+\def \ssScope     {\mysubsection{Circle the Variables' Scopes}}
+\def \ssMemory    {\mysubsection{Fill in the Memory}}
+\def \ssFix       {\mysubsection{Fix the Broken Code}}
+\def \ssTrace     {\mysubsection{Trace the Working Code}}
 
 \long\def \textQuestion #1#2{%
-  \filbreak
   \setlength{\currentparskip}{\parskip}
   \begin{minipage}[t][3.5in][t]{\textwidth}
     \setlength{\parskip}{\currentparskip}
@@ -204,44 +214,45 @@
 }
 
 \def \codeScope #1{%
-  \filbreak
   \vspace{1ex}
-  \inputminted[frame=none,fontsize=\large]{c++}{./code/#1.cpp}
+  \inputminted[fontsize=\large]{c++}{./code/#1.cpp}
   \newpage
 }
 
 \def \codeMemory #1{%
-  \filbreak
   \vspace{2ex}
   \includegraphics{./images/memory-0}
   \vspace{-2ex}
-  \inputminted[frame=none,fontsize=\large]{c++}{./code/#1.cpp}
+  \inputminted[fontsize=\large]{c++}{./code/#1.cpp}
   \newpage
 }
 
 \def \codeFix #1{%
-  \filbreak
   \question{
     \inputminted{c++}{./code/#1.cpp}
   } \answer{
-    \inputminted{c++}{./code/#1.answer.cpp}
+
+    \inputminted[frame=single,rulecolor=\color{.!30},framesep=2mm]
+                {c++}{./code/#1.answer.cpp}
     \vspace{-6ex}
-    \inputminted{diff}{./code/#1.answer.cpp.diff}
+    \inputminted[frame=single,rulecolor=\color{.!30},framesep=2mm]
+                {diff}{./code/#1.answer.cpp.diff}
     \vspace{-6ex}
-    \inputminted{text}{./code/#1.answer.cpp.output}
+    \inputminted[frame=single,rulecolor=\color{.!30},framesep=2mm]
+                {text}{./code/#1.answer.cpp.output}
   }
-  \vspace{-5ex}
+  \newpage
 }
 
 \def \codeTrace #1{%
-  \filbreak
   \inputminted{c++}{./code/#1.cpp}
   \question{
   } \answer{
-    \vspace{-6ex}
-    \inputminted{text}{./code/#1.cpp.output}
+    \vspace{-4ex}
+    \inputminted[frame=single,rulecolor=\color{.!30},framesep=2mm]
+                {text}{./code/#1.cpp.output}
   }
-  \vspace{-5ex}
+  \newpage
 }
 
 
@@ -253,7 +264,6 @@
 \begin{document}
 \thispagestyle{firstpage}
 
-\newpage
 \section*{Instructions}\gdef\docSection{Instructions}
 For a each topic (if applicable) there are 5 sections:
 
@@ -279,9 +289,10 @@ compile and run without errors or warnings.
 Trace through the execution of the code, keeping track of the value of each
 variable at each point in time, and the final output that the program produces.
 
-
 \newpage
-\section{Variables and Assignment}
+
+
+\mysection{Variables and Assignment}
 
 \ssQuestions %{{{
 \textQuestion{
@@ -322,28 +333,23 @@ variable at each point in time, and the final output that the program produces.
 \newpage %}}}
 
 \ssScope
-\codeScope{1-scope-1}
-\newpage
+\codeScope{1-scope-1} \newpage
 
 \ssMemory
-\codeMemory{1-memory-1}
-\newpage
+\codeMemory{1-memory-1} \newpage
 
 \ssFix
-\codeFix{1-fix-1}
-\codeFix{1-fix-2}
-\newpage
+\codeFix{1-fix-1} \newpage
+\codeFix{1-fix-2} \newpage
 
 \ssTrace
-\codeTrace{1-trace-1}
-\codeTrace{1-trace-2}
-\codeTrace{1-trace-3}
-\codeTrace{1-trace-4}
-\newpage
+\codeTrace{1-trace-1} \newpage
+\codeTrace{1-trace-2} \newpage
+\codeTrace{1-trace-3} \newpage
+\codeTrace{1-trace-4} \newpage
 
 
-\newpage
-\section{Data Types and Expressions}
+\mysection{Data Types and Expressions}
 
 \ssQuestions %{{{
 \textQuestion{
@@ -408,37 +414,31 @@ variable at each point in time, and the final output that the program produces.
 \newpage %}}}
 
 \ssFix
-\codeFix{2-fix-1}
-\codeFix{2-fix-2}
-\newpage
+\codeFix{2-fix-1} \newpage
+\codeFix{2-fix-2} \newpage
 
 \ssTrace
-\codeTrace{2-trace-1}
-\codeTrace{2-trace-2}
-\codeTrace{2-trace-3}
-\newpage
+\codeTrace{2-trace-1} \newpage
+\codeTrace{2-trace-2} \newpage
+\codeTrace{2-trace-3} \newpage
 
 
-\newpage
-\section{If and If-Else}
+\mysection{If and If-Else}
 
 \ssFix
-\codeFix{3-fix-1}
-\codeFix{3-fix-2}
-\codeFix{3-fix-3}
-\newpage
+\codeFix{3-fix-1} \newpage
+\codeFix{3-fix-2} \newpage
+\codeFix{3-fix-3} \newpage
 
 \ssTrace
-\codeTrace{3-trace-1}
-\codeTrace{3-trace-2}
-\codeTrace{3-trace-3}
-\codeTrace{3-trace-4}
-\codeTrace{3-trace-5}
-\newpage
+\codeTrace{3-trace-1} \newpage
+\codeTrace{3-trace-2} \newpage
+\codeTrace{3-trace-3} \newpage
+\codeTrace{3-trace-4} \newpage
+\codeTrace{3-trace-5} \newpage
 
 
-\newpage
-\section{Functions}
+\mysection{Functions}
 
 \ssQuestions %{{{
 \textQuestion{
@@ -483,14 +483,12 @@ variable at each point in time, and the final output that the program produces.
 \newpage %}}}
 
 \ssFix
-\codeFix{4-fix-1}
-\codeFix{4-fix-2}
-\codeFix{4-fix-3}
-\newpage
+\codeFix{4-fix-1} \newpage
+\codeFix{4-fix-2} \newpage
+\codeFix{4-fix-3} \newpage
 
 
-\newpage
-\section{Loops}
+\mysection{Loops}
 
 \ssQuestions %{{{
 \textQuestion{
@@ -540,77 +538,50 @@ variable at each point in time, and the final output that the program produces.
 \newline %}}}
 
 \ssScope
-\codeScope{5-scope-1}
-\codeScope{5-scope-2}
-\codeScope{5-scope-3}
-\newpage
+\codeScope{5-scope-1} \newpage
+\codeScope{5-scope-2} \newpage
+\codeScope{5-scope-3} \newpage
 
 \ssFix
-\codeFix{5-fix-1}
-\codeFix{5-fix-2}
-\newpage
+\codeFix{5-fix-1} \newpage
+\codeFix{5-fix-2} \newpage
 
 \ssTrace
-\codeTrace{5-trace-1}
-\codeTrace{5-trace-2}
-\codeTrace{5-trace-3}
-\newpage
+\codeTrace{5-trace-1} \newpage
+\codeTrace{5-trace-2} \newpage
+\codeTrace{5-trace-3} \newpage
 
 
-\newpage
-\section{Arrays}
+\mysection{Arrays}
 % TODO
-% - declaring
-%   - uninitialized
-%   - initialized
-% - initializing with loops
-% - initializing with cin
-% - accessing a single element
 % - swapping elements
 
 \ssMemory
-\codeMemory{6-memory-1}
-\codeMemory{6-memory-2}
-\codeMemory{6-memory-3}
-\codeMemory{6-memory-4}
-\codeMemory{6-memory-5}
-\newpage
+\codeMemory{6-memory-1} \newpage
+\codeMemory{6-memory-2} \newpage
+\codeMemory{6-memory-3} \newpage
+\codeMemory{6-memory-4} \newpage
+\codeMemory{6-memory-5} \newpage
 
 \ssFix
-\codeFix{6-fix-1}
-\codeFix{6-fix-2}
-\newpage
+\codeFix{6-fix-1} \newpage
+\codeFix{6-fix-2} \newpage
 
 \ssTrace
-\codeTrace{6-trace-1}
-\codeTrace{6-trace-2}
-\codeTrace{6-trace-3}
-\codeTrace{6-trace-4}
-\newpage
+\codeTrace{6-trace-1} \newpage
+\codeTrace{6-trace-2} \newpage
+\codeTrace{6-trace-3} \newpage
+\codeTrace{6-trace-4} \newpage
 
 
 % % mostly covered by the other sections i hope; especially "data types and
 % % expressions", and "if and if-else"
-% \newpage
-% \section{Boolean Expressions}
+% \mysection{Boolean Expressions}
 % % - evaluating by hand
-% 
-% \ssQuestions
-% \ssScope
-% \ssMemory
-% \ssFix
-% \ssTrace
 
 
 % % don't think we'll have time for this one...
-% \newpage
-% \section{Selection Sort}
-% 
-% \ssQuestions
-% \ssScope
-% \ssMemory
-% \ssFix
-% \ssTrace
+% \mysection{Selection Sort}
 
 
 \end{document}
