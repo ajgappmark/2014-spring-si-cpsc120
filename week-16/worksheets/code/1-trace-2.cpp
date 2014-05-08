@@ -6,11 +6,11 @@ int main() {
 
     int a, b, c;
 
-    a = b = c = 3;  cout << a << " " << b << " " << c << endl;
-    b = c = 5;      cout << a << " " << b << " " << c << endl;
-    c = 7;          cout << a << " " << b << " " << c << endl;
+    a = b = c = 3;  cout<<a<<" "<<b<<" "<<c<<endl;
+    b = c = 5;      cout<<a<<" "<<b<<" "<<c<<endl;
+    c = 7;          cout<<a<<" "<<b<<" "<<c<<endl;
 
-    int d = b;      cout << a << " " << b << " " << c << " " << d << endl;
+    int d = b;      cout<<a<<" "<<b<<" "<<c<<" "<<d<<endl;
 
     return 0;
 }

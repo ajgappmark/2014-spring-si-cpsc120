@@ -3,6 +3,8 @@
 using namespace std;
 
 int main() {
+    // 1 mistake
+
     int    i = '5' + 4.7;  // '5' == 53
     char   c = 42;         // '*' == 42
     bool   b = 10;

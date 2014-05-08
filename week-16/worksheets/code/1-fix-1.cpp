@@ -2,6 +2,8 @@
 using namespace std;
 
 int main() {
+    // 5 mistakes
+
     int a = 5;
     int b = 7;
 

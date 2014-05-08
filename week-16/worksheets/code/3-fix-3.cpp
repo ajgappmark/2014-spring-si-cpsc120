@@ -2,6 +2,8 @@
 using namespace std;
 
 int main() {
+    // 1 type of mistake
+
     int a = 3;
 
     if (a = 5)

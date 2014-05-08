@@ -12,11 +12,11 @@ OUTPUT += $(CPP_MEMORY:%.cpp=%.cpp.output)
 OUTPUT += $(CPP_FIX:%.cpp=%.cpp.output)
 OUTPUT += $(CPP_TRACE:%.cpp=%.cpp.output)
 
-ANSWER_PAGES := $(wildcard ./answer-pages/*.pdf)
+ANSWER_PAGES := $(filter-out ./answer-pages/%.note.pdf,$(wildcard ./answer-pages/*.pdf))
 
 # -----------------------------------------------------------------------------
 
-.PHONY: all clean cleanall
+.PHONY: all clean cleanall dropbox
 
 all: $(DIFF) $(OUTPUT) $(PDF)
 
@@ -26,6 +26,9 @@ clean:
 
 cleanall: clean
 	latexmk --shell-escape -lualatex -bibtex -pdf -C $(TEX)
+
+dropbox: all
+	cp *.pdf ~/Dropbox/tmp
 
 # -----------------------------------------------------------------------------
 

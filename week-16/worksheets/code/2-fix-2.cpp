@@ -2,6 +2,8 @@
 using namespace std;
 
 int main() {
+    // 1 line has mistakes
+
     // formula (in math notation): C = (F-32)*(5/9)
 
     double fahrenheit = 100;  // getting close to summer!

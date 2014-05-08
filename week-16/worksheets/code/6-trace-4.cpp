@@ -2,18 +2,7 @@
 using namespace std;
 
 int main() {
-    // declare and initialize the array
-    int a[7];
-    for (int i=0; i<7; i++)
-        a[i] = (i*7)%5;
-
-    // print the array
-    cout << "a = { ";
-    for (int i=0; i<7; i++)
-        cout << a[i] << ", ";
-    cout << "};\n";
-
-    // --- find and print the max and min values ---
+    int a[7] = { 6, 7, 3, 5, 2, 1, 4 };
 
     int min = a[0];
     int max = a[0];

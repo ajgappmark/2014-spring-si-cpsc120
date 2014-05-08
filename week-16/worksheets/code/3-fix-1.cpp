@@ -2,6 +2,8 @@
 using namespace std;
 
 int main() {
+    // 2 mistakes
+
     int a = 3;
 
     if (0 < a < 2)

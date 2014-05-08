@@ -6,7 +6,7 @@ using namespace std;
 // This function prints "hello world!"
 //
 // Arguments: none
-// Return value: void
+// Returns: nothing
 void print_hello() {
     cout << "hello world!" << endl;
 }

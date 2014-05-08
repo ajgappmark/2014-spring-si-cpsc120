@@ -1,6 +1,17 @@
 % vim: foldmethod=marker foldlevel=0
 
 % -----------------------------------------------------------------------------
+% TODO
+% - One (at least) of the answer pages for a "fix" problem has overlapping
+%   boxes.  Need to fix the macros so that doesn't happen.  But that will mess
+%   up the page numbers for the answers drawn in Notability, so, not tonight.
+%
+% Maybe
+% - Maybe add a section on selection sort
+% - Maybe a special section, on booleans?
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
 % information
 % -----------------------------------------------------------------------------
 
@@ -68,7 +79,6 @@
 
 \usemintedstyle{solarizedlight}
 
-% \fvset{samepage=true,frame=single,rulecolor=\color{.!30},framesep=2mm}
 \fvset{samepage=true}
 
 % header and footer -----------------------------------------------------------
@@ -232,7 +242,6 @@
   \question{
     \inputminted{c++}{./code/#1.cpp}
   } \answer{
-
     \inputminted[frame=single,rulecolor=\color{.!30},framesep=2mm]
                 {c++}{./code/#1.answer.cpp}
     \vspace{-6ex}
@@ -554,8 +563,6 @@ variable at each point in time, and the final output that the program produces.
 
 
 \mysection{Arrays}
-% TODO
-% - swapping elements
 
 \ssMemory
 \codeMemory{6-memory-1} \newpage
@@ -573,16 +580,6 @@ variable at each point in time, and the final output that the program produces.
 \codeTrace{6-trace-2} \newpage
 \codeTrace{6-trace-3} \newpage
 \codeTrace{6-trace-4} \newpage
-
-
-% % mostly covered by the other sections i hope; especially "data types and
-% % expressions", and "if and if-else"
-% \mysection{Boolean Expressions}
-% % - evaluating by hand
-
-
-% % don't think we'll have time for this one...
-% \mysection{Selection Sort}
 
 
 \end{document}

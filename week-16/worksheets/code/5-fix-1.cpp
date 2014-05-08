@@ -2,6 +2,8 @@
 using namespace std;
 
 int main() {
+    // 2 mistakes
+
     cout << "i = ";
     for (int i=0; i<5; i+1) {
         cout << i << ", ";

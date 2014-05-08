@@ -14,7 +14,7 @@ int main() {
     if (b < c)
         smallest = b;
 
-    if (c < b)
+    if (c <= b)
         smallest = c;
 
     if (a <= b && a <= c) {
