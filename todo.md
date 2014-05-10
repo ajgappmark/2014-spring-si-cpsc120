@@ -185,3 +185,7 @@ A place for thoughts and possible revisions.
 - Some of the typically faster students came up with some fun extensions :) it
   was *really* cool to see :)
 
+## Week 16
+- Really relaxed.  People finished their maze projects.  We were going to do a
+  review, but since people were still working on projects, it didn't happen.
+
